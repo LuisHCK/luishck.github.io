@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  {% include styles.html %}
+  <header class="site-header" style="background-image: url('assets/img/{{site.cover}}')">
+    <div class="header-content">
+      <h1>{{site.title}}</h1>
+      <br>
+      <p>{{site.description}}</p>
+      <br>
+      <div class="social-links">
+        {% if site.social.github %}
+        <a href="https://github.com/{{site.social.github}}" target="_blank" class="social-link">
+          <i class="socicon-github"></i>
+        </a>
+        {% endif %} {% if site.social.twitter %}
+        <a href="https://twitter.com/{{site.social.twitter}}" target="_blank" class="social-link">
+          <i class="socicon-twitter"></i>
+        </a>
+        {% endif %} {% if site.social.facebook %}
+        <a href="https://facebook.com/{{site.social.facebook}}" target="_blank" class="social-link">
+          <i class="socicon-facebook"></i>
+        </a>
+        {% endif %} {% if site.social.email %}
+        <a href="mailto://{{site.social.email}}" target="_blank" class="social-link">
+          <i class="socicon-mail"></i>
+        </a>
+        {% endif %}
+      </div>
+      <div class="page-links">
+        <a id="portfolio_btn">Portfolio</a>
+        <a id="blog_btn">Blog</a>
+        <a id="contact_btn">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="portfolio" class="portfolio">
+    <h1 class="title is-1">Portfolio</h1>
+    <div class="columns is-mobile is-multiline">
+      {% for project in site.data.projects %}
+      <!-- Include component -->
+      {% include /components/project_card.html project=project %} {% endfor %}
+      <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+        <div class="card" style="min-height: 100">
+          <div class="card-image">
+            <div class="card-content center-text">
+              <h4 class="title is-4">Show all Projects</h4>
+              <a href="/projects" class="button is-rounded">Go to Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="blog" class="blog-posts">
+    <h1 class="title is-1">Posts</h1>
+    <div class="columns is-mobile is-multiline">
+      {% for post in site.posts limit:3 %} {% include /components/post_card.html post=post %} {% endfor %}
+      <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+        <div class="card" style="min-height: 100">
+          <div class="card-image">
+            <div class="card-content center-text">
+              <h4 class="title is-4">Show all Posts</h4>
+              <a href="/posts" class="button is-rounded">Go to Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+{% include footer.html %}
+
+</html>

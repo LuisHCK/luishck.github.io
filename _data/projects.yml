@@ -1,0 +1,41 @@
+---
+- name: ConoceNicaragua
+  description: An App based on Web technologies aimed at promoting tourism in Nicaragua
+  cover: ../assets/img/projects/conocenic.jpg
+  url: http://conocenicaragua.com
+  page: conocenicaragua
+  stack:
+    - vuejs
+    - html5
+    - django
+
+- name: ADM
+  description: A basic POS software to help small businesses take control of their sales
+  cover: ../assets/img/projects/adm.jpg
+  url: https://github.com/LuisHCK/administracion
+  page:
+  stack:
+    - django
+    - html5
+
+- name: DomiTiendas
+  description: An App to place orders to nearby stores. Currently operating in Colombia
+  cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/domitiendas.jpg
+  url: https://domitiendas.co
+  page:
+  stack:
+    - angularjs
+    - html5
+    - rails
+    - android
+    - apple
+
+- name: SoffyNet
+  description: An App to place orders to nearby stores. Currently operating in Colombia
+  cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/Productos.jpg
+  url: https://soffynet.com
+  page:
+  stack:
+    - vuejs
+    - html5
+    - rails

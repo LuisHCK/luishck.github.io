@@ -1,0 +1,29 @@
+<div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-2by1">
+        <img src="{{project.cover}}" alt="{{project.name}}">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="card-media">
+        <div class="media-content">
+          <p class="title is-4">{{project.name}}</p>
+          <p>{{project.description}}</p>
+          <div>
+            {% for tool in project.stack %}
+            <i class="devicon-{{tool}}-plain"></i>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="card-footer">
+      {% if project.url %}
+      <a class="card-footer-item" href="{{project.url}}" target="_blank">Visit</a>
+      {% endif %} {% if project.page %}
+      <a class="card-footer-item" href="{{root_url}}/projects/{{project.page}}">More details</a>
+      {% endif %}
+    </footer>
+  </div>
+</div>

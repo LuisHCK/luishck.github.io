@@ -1,0 +1,26 @@
+---
+# Projects page
+title: My Projects
+---
+
+{% include head.html title=page.title %}
+
+<body class="projects-page">
+  {% include styles.html %}
+  <div class="header">
+    {% include navbar.html %}
+    <h1 class="title is-1">My Projects</h1>
+  </div>
+  <div class="projects-container">
+    <br>
+    <div class="columns is-mobile is-multiline">
+      {% for project in site.data.projects %}
+      <!-- Include component -->
+      {% include /components/project_card.html project=project %}
+      <!-- Include component  -->
+      {% endfor %}
+    </div>
+  </div>
+  {% include footer.html %}
+
+</body>

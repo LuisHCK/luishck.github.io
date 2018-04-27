@@ -1,0 +1,32 @@
+$desktop: 720px;
+$tablet: 500px;
+$phone: 350px;
+
+body {
+  background-color: rgb(245, 245, 245);
+  .column {
+    min-height: 100vh;
+  }
+}
+
+div.project-header {
+  height: 40vh;
+  background-color: rgba(0, 0, 0, 0.459);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  .cover {
+    height: 100%;
+    text-align: center;
+    color: white;
+    h1 {
+      color: white;
+      @media screen and (min-width: $desktop) {
+        padding-top: 5%;
+      }
+      @media screen and (max-width: $phone) {
+        padding-top: 10%;
+      }
+    }
+  }
+}

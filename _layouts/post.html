@@ -1,0 +1,34 @@
+{% include head.html title=page.title %}
+
+<body>
+  {% include navbar.html %} {% include styles.html %} {% assign author = site.data.authors[page.author] %}
+
+  <div class="columns is-mobile is-centered post-container">
+    <div class="column is-half-desktop is-full-mobile">
+      <div class="post-date">
+        {{page.date | date: '%B %d, %Y'}}
+      </div>
+      <div class="author-card">
+        <img src="{{root_url}}/{{author.avatar}}" alt="{{author.name}}" class="avatar">
+        <div class="social-links">
+          <h2>{{author.name}}</h2>
+          <small class="text-muted">@{{author.username}}</small>
+          {% if author.twitter %}
+          <a href="https://twitter.com/{{author.twitter}}">
+            <i class="socicon-twitter"></i>
+          </a>
+          {% endif %} {% if author.github %}
+          <a href="https://github.com/{{author.github}}">
+            <i class="socicon-github"></i>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <h1 class="title is-1">{{page.title}}</h1>
+      <p class="subtitle">{{page.description}}</p>
+      {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+
+</body>

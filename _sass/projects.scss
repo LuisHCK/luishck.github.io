@@ -1,0 +1,18 @@
+.projects-page {
+  margin: 0;
+  .header {
+    background-image: url('/assets/img/coding.jpg');
+    background-color: rgba(88, 88, 161, 0.918);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position-y: center;
+    height: 45vh;
+    color: white;
+    text-align: center;
+
+    h1 {
+      padding-top: 10vh;
+      color: white;
+    }
+  }
+}

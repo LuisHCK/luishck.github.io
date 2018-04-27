@@ -1,0 +1,112 @@
+section {
+  min-height: 100vh;
+}
+
+.navbar .brand-text {
+  padding-left: 15px;
+  font-size: 14pt;
+}
+
+.site-header {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0000005b;
+  background-blend-mode: darken;
+  text-align: center;
+  color: white;
+  padding: 8px;
+}
+
+.site-header .header-content {
+  color: white;
+  padding-top: 10%;
+}
+
+@media only screen and (min-width: 600px) {
+  .site-header .header-content {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .site-header p {
+    font-size: 16pt;
+    line-height: 2;
+  }
+}
+
+.site-header h1 {
+  font-style: bold;
+  font-size: 34pt;
+}
+.site-header p {
+  padding-bottom: 25px;
+}
+
+.social-link {
+  font-size: 22pt;
+  color: white;
+  padding: 4%;
+}
+.social-link:hover {
+  color: rgb(228, 228, 228);
+}
+
+.page-links {
+  padding-top: 10%;
+  display: flex;
+  justify-content:space-between;
+}
+
+.page-links a {
+  color: white;
+  font-size: 14pt;
+}
+
+.page-links a:hover {
+  color: rgb(102, 102, 245);
+}
+
+section {
+  padding: 10px;
+}
+
+section.blog-posts {
+  background-color: #263238;
+}
+
+.blog-posts h1 {
+  color: white;
+}
+
+section.portfolio .card i {
+  font-size: 22pt;
+  line-height: 1.5;
+  color: rgb(28, 94, 194);
+}
+
+.post-container img.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.post-container .author-card {
+  display: flex;
+}
+
+.post-container .author-card .social-links {
+  padding-left: 15px;
+}
+
+.post-container .post-date {
+  float: right;
+}
+
+.columns {
+  margin: 0;
+}
+
+.center-text, .text-centered {
+  text-align: center;
+}

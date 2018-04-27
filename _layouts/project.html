@@ -1,0 +1,20 @@
+{% include head.html title=page.title %} {% include styles.html %}
+
+<body>
+  <div class="project-header" style="background-image: url('{{ root_url }}/{{ page.cover }}')">
+    <div class="cover">
+      <div class="content">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="columns is-mobile is-centered project-container">
+      <div class="column is-half-desktop is-full-mobile">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
