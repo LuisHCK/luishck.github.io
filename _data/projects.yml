@@ -1,13 +1,12 @@
 ---
-- name: ConoceNicaragua
-  description: An App based on Web technologies aimed at promoting tourism in Nicaragua
-  cover: ../assets/img/projects/conocenic.jpg
-  url: http://conocenicaragua.com
-  page: conocenicaragua
+- name: Tubefy
+  description: A PWA Music player based on your Youtube Playlists
+  cover: ../assets/img/projects/Tubefy_Cover.jpg
+  url: https://luishck/tubefy
+  page: tubefy
   stack:
     - vuejs
     - html5
-    - django
 
 - name: ADM
   description: A basic POS software to help small businesses take control of their sales
