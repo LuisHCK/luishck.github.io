@@ -6,8 +6,8 @@ document.getElementById('blog_btn').addEventListener('click', () => {
   doScrolling('blog')
 })
 
-document.getElementById('contact_btn').addEventListener('click', () => {
-  doScrolling('portfolio')
+document.getElementById('about_me_btn').addEventListener('click', () => {
+  doScrolling('aboutme')
 })
 
 function doScrolling(id) {

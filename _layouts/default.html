@@ -33,17 +33,17 @@
       <div class="page-links">
         <a id="portfolio_btn">Portfolio</a>
         <a id="blog_btn">Blog</a>
-        <a id="contact_btn">Contact</a>
+        <a id="about_me_btn">About me</a>
       </div>
     </div>
   </header>
 
   <section id="portfolio" class="portfolio">
-    <h1 class="title is-1">Portfolio</h1>
+    <h1 class="title is-2">Portfolio</h1>
     <div class="columns is-mobile is-multiline">
       {% for project in site.data.projects %}
       <!-- Include component -->
-      {% include /components/project_card.html project=project %} {% endfor %}
+      {% include /components/project_card.html project=project %}{% endfor %}
       <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
         <div class="card" style="min-height: 100">
           <div class="card-image">
@@ -57,7 +57,7 @@
   </section>
 
   <section id="blog" class="blog-posts">
-    <h1 class="title is-1">Posts</h1>
+    <h1 class="title is-2">Posts</h1>
     <div class="columns is-mobile is-multiline">
       {% for post in site.posts limit:3 %} {% include /components/post_card.html post=post %} {% endfor %}
       <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
@@ -71,6 +71,11 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="aboutme" class="about-me">
+    <h1 class="title is-2">About me</h1>
+    {% include about_me.html %}
   </section>
 
   <script src="assets/js/main.js"></script>

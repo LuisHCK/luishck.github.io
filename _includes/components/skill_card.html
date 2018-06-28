@@ -1,0 +1,23 @@
+{% if include.skill.level == "advanced" %} {% assign tag_color = "success" %} {% elsif include.skill.level == "intermediate"
+%} {% assign tag_color = "primary" %} {% elsif include.skill.level == "basic" %} {% assign tag_color = "info" %} {% else
+%} {% assign tag_color = "" %} {% endif %}
+
+
+<div class="card skill-card">
+  <header class="card-header">
+    <p class="card-header-title text-centered">
+      {{ include.skill.name }}
+    </p>
+    <span class="tag is-{{ tag_color }}" style="text-transform: capitalize">
+      {{ include.skill.level }}
+    </span>
+  </header>
+  <div class="card-content">
+    <img src="{{ include.skill.icon }}" alt="{{ include.skill.name }}">
+    <div class="content">
+      <p>
+        {{ include.skill.description }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -110,3 +110,9 @@ section.portfolio .card i {
 .center-text, .text-centered {
   text-align: center;
 }
+
+img.profile-pic {
+  height: 180px;
+  width: auto;
+  border-radius: 200px;
+}

@@ -14,9 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Luis J. Centeno
-email: your-email@domain.com
+email: luisjcenteno@live.com
 description: > # this means to ignore newlines until "baseurl:"
   I'm a Web developer and this is my personal web page, i talk about software development and my personal projects.
+long_description: >
+  My name is Luis J. Centeno, i'm from Nicaragua. I'm dedicated to web development I have more than 3 years of experience with several modern web technologies. Here I show you the main technologies that I use and can benefit you or your company.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://luishck.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 cover: andromeda.jpg
