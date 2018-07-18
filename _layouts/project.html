@@ -1,4 +1,12 @@
-{% include head.html title=page.title %} {% include styles.html %}
+{% 
+  include head.html 
+  title=page.title
+  description=page.description
+  keywords=site.keywords
+  url=site.url
+  image=page.cover
+%}
+{% include styles.html %}
 
 <body>
   <div class="project-header" style="background-image: url('{{ root_url }}/{{ page.cover }}')">

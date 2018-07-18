@@ -1,10 +1,18 @@
-{% include head.html title=page.title %}
-
+{% 
+  include head.html 
+  title=page.title
+  description=page.description
+  keywords=page.categories
+  url=site.url
+  image=page.cover
+%}
 <body>
   {% include navbar.html %} {% include styles.html %} {% assign author = site.data.authors[page.author] %}
 
   <div class="columns is-mobile is-centered post-container">
     <div class="column is-half-desktop is-full-mobile">
+      <div class="cover-area" style="background-image: url('{{root_url}}/{{page.cover}}')">
+      </div>
       <div class="post-date">
         {{page.date | date: '%B %d, %Y'}}
       </div>

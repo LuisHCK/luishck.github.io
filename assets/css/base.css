@@ -85,24 +85,6 @@ section.portfolio .card i {
   color: rgb(28, 94, 194);
 }
 
-.post-container img.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-}
-
-.post-container .author-card {
-  display: flex;
-}
-
-.post-container .author-card .social-links {
-  padding-left: 15px;
-}
-
-.post-container .post-date {
-  float: right;
-}
-
 .columns {
   margin: 0;
 }

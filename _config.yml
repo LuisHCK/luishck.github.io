@@ -20,9 +20,10 @@ description: > # this means to ignore newlines until "baseurl:"
 long_description: >
   My name is Luis J. Centeno, i'm from Nicaragua. I'm dedicated to web development I have more than 3 years of experience with several modern web technologies. Here I show you the main technologies that I use and can benefit you or your company.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://luishck.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://luishck.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 cover: andromeda.jpg
 logo: logo.png
+keywords: Luis Johany Centeno Rails React Ruby VueJS Development Desarrollo Web 2018 Progresive Web apps Nicaragua Freelancer Cheap Professional
 
 # Your skills
 skills:

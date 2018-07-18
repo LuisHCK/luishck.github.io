@@ -2,9 +2,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/png" href="{{"assets/img/logo.png" | relative_url}}"/>
+  <link rel="shortcut icon" type="image/png" href="{{" assets/img/logo.png " | relative_url}}"/>
   <title>{{site.title}} | {{ include.title }}</title>
-  <meta name="description" content="I'm a Web developer and this is my personal web page, i talk about software development and my personal projects">
-  <meta name="keywords" content="Luis Johany Centeno Rails React Ruby VueJS Development Desarrollo Web 2018 Progresive Web apps">
+  <meta name="description" content="{{ include.description }}">
+  <meta name="keywords" content="{{ include.keywords }}">
   <meta name="author" content="Luis J. Centeno">
+
+  <!-- Social tags -->
+  <meta property="og:title" content="{{ include.title}}" />
+  <meta property="og:url" content="{{ include.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ include.description }}" />
+  <meta property="og:image" content="{{root_url}}/{{ include.image }}" />
+  <meta property="og:site_name" content="Luis J. Centeno" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@luishck" />
+  <meta name="twitter:title" content="{{ include.title }}" />
+  <meta name="twitter:description" content="{{ include.description  }}" />
+  <meta name="twitter:image" content="{{ root_url }}/{{ include.image }}" />
+  <meta name="twitter:creator" content="@luishck" />
 </head>

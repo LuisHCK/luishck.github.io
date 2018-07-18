@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html title="Web Developer" %}
+    {% 
+      include head.html 
+      title="Web Developer"
+      description=site.description
+      keywords=site.keywords
+      url=site.url
+      image="assets/img/andromeda.jpg"
+    %}
 
 <body>
   {% include styles.html %}
