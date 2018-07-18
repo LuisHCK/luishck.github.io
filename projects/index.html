@@ -1,9 +1,19 @@
 ---
 # Projects page
 title: My Projects
+description: A collection of my best projects
+keywords: Luis J. Centeno experience developer projects proyectos curriculum CV
+cover: assets/img/coding.jpg
 ---
 
-{% include head.html title=page.title %}
+{% 
+  include head.html 
+  title=page.title
+  description=page.description
+  keywords=page.categories
+  url=page.url
+  image=page.cover
+%}
 
 <body class="projects-page">
   {% include styles.html %}
