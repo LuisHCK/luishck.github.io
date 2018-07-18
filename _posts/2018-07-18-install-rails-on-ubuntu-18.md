@@ -6,6 +6,7 @@ date: 2018-07-18 00:00:03 -0600
 categories: ruby rails ubuntu 18.04 Bionic Beaver
 description: Setting up Ruby and Ruby on Rails invironment on Ubuntu 18.04
 cover: ../assets/img/ubuntu-rails-installation.jpg
+permalink: /posts/:title:output_ext
 ---
 # Install dependencies
 We need to install some stuff required by Ruby and Rails ecosystem.
