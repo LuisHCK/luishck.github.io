@@ -2,7 +2,7 @@
 - name: Tubefy
   description: A PWA Music player based on your Youtube Playlists
   cover: ../assets/img/projects/Tubefy_Cover.jpg
-  url: https://luishck/tubefy
+  url: https://luishck.github.io/tubefy
   page: tubefy
   stack:
     - vuejs
