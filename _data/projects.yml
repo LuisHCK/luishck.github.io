@@ -21,7 +21,7 @@
   description: An App to place orders to nearby stores. Currently operating in Colombia
   cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/domitiendas.jpg
   url: https://domitiendas.co
-  page:
+  page: 
   stack:
     - angularjs
     - html5
@@ -33,7 +33,7 @@
   description: An App to place orders to nearby stores. Currently operating in Colombia
   cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/Productos.jpg
   url: https://soffynet.com
-  page:
+  page: soffy
   stack:
     - vuejs
     - html5

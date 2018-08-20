@@ -1,5 +1,5 @@
 <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
-  <div class="card" style="height: 100%;">
+  <div class="card">
     <div class="card-image">
       <figure class="image is-2by1">
         <img src="{{project.cover}}" alt="{{project.name}}">
@@ -19,11 +19,7 @@
       </div>
     </div>
     <footer class="card-footer">
-      {% if project.url %}
-      <a class="card-footer-item" href="{{project.url}}" target="_blank">Visit</a>
-      {% endif %} {% if project.page %}
       <a class="card-footer-item" href="{{root_url}}/projects/{{project.page}}">More details</a>
-      {% endif %}
     </footer>
   </div>
 </div>

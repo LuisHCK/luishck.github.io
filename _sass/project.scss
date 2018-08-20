@@ -4,10 +4,19 @@ $phone: 350px;
 
 body {
   background-color: rgb(245, 245, 245);
+  ul {
+    li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+  p {
+    padding: 10px 0px 10px 0px;
+  }
 }
 
 div.project-header {
-  height: 40vh;
+  height: 50vh;
   background-color: rgba(0, 0, 0, 0.459);
   background-position: center;
   background-size: cover;

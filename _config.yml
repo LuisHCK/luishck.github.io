@@ -61,3 +61,6 @@ exclude:
 sass:
     sass_dir: _sass
     style: compressed
+
+plugins_dir:
+  - jekyll-sitemap
