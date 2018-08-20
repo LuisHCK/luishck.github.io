@@ -62,5 +62,5 @@ sass:
     sass_dir: _sass
     style: compressed
 
-plugins_dir:
+plugins:
   - jekyll-sitemap
