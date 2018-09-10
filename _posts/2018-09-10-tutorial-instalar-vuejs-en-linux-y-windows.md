@@ -4,7 +4,7 @@ title: 'Tutorial: Instalar Vuejs en Ubuntu y Windows'
 layout: post
 author: luishck
 date: 2018-06-25 00:46:21 -0600
-cover: ../assets/img/vuejs-linux-windows.gif
+cover: ../assets/img/vuejs-windows-linux.gif
 
 categories:
   - tutorial
