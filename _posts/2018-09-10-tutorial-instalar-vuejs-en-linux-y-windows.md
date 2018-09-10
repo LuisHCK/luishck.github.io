@@ -4,6 +4,8 @@ title: 'Tutorial: Instalar Vuejs en Ubuntu y Windows'
 layout: post
 author: luishck
 date: 2018-06-25 00:46:21 -0600
+cover: ../assets/img/vuejs-linux-windows.gif
+
 categories:
   - tutorial
   - Vuejs
@@ -74,7 +76,7 @@ choco --version
 # Te mostrará la versión instalada
 ```
 
-En caso que no te muestre nada o un error, cierra la consola y abrela de nuevo, siempre como **Administrador**
+> En caso que no te muestre nada o un error, cierra la consola y abrela de nuevo, siempre como **Administrador**
 
 Finalmente instalamos NodeJS escribiendo los siguientes comandos:
 
@@ -86,6 +88,8 @@ refreshEnv
 node --version
 # 10.x.x <- Version de Node Instalada
 ```
+
+> En caso que este ultimo comando te retorne un error, intenta cerrando el CMD y abriéndolo nuevamente como Administrador.
 
 ## Instalando Vue CLI
 
@@ -103,4 +107,4 @@ vue --version
 # 3.x.x <- Nos deberá mostrar algo similar a esto
 ```
 
-Y eso es todo, si deseas aprender mas sobre Vue pásate por mi canal de YouTube, estamos creando un **Clon de Instagram** con el cual aprendemos muchas cosas súper interesantes que te podrían gustar.
+Y eso es todo, si deseas aprender mas sobre Vue pásate por [mi canal de YouTube](https://www.youtube.com/c/LuisJCenteno), estamos creando un [**Clon de Instagram**](https://www.youtube.com/c/LuisJCenteno) con el cual aprendemos muchas cosas súper interesantes que te podrían gustar.
