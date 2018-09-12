@@ -5,7 +5,7 @@ layout: post
 author: luishck
 date: 2018-06-25 00:46:21 -0600
 cover: ../assets/img/vuejs-windows-linux.gif
-
+description: Guia para instalar Vue CLI en Windows o Linux (Ubuntu)
 categories:
   - tutorial
   - Vuejs
