@@ -10,6 +10,6 @@ categories:
   - Vue
   - basico
   - componentes
-  permalink: /posts/:title:output_ext
+permalink: /posts/:title:output_ext
 ---
 Anteriormente aprendimos a instalar b
