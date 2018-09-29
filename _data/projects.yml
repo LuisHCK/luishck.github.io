@@ -1,21 +1,23 @@
 ---
-- name: Tubefy
-  description: A PWA Music player based on your Youtube Playlists
-  cover: ../assets/img/projects/Tubefy_Cover.jpg
-  url: https://luishck.github.io/tubefy
-  page: tubefy
+- name: Encuentra Cuarto (App Concept)
+  description: An app that helps to rent rooms easily and free of charge
+  cover: ../assets/img/projects/encuentra_screenshots/cover.jpg
+  url:
+  page: encuentra
+  stack:
+    - android
+    - apple
+    - vuejs
+
+- name: SoffyNet
+  description: An App to place orders to nearby stores. Currently operating in Colombia
+  cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/Productos.jpg
+  url: https://soffynet.com
+  page: soffy
   stack:
     - vuejs
     - html5
-
-- name: ADM
-  description: A basic POS software to help small businesses take control of their sales
-  cover: ../assets/img/projects/adm.jpg
-  url: https://github.com/LuisHCK/administracion
-  page:
-  stack:
-    - django
-    - html5
+    - rails
 
 - name: DomiTiendas
   description: An App to place orders to nearby stores. Currently operating in Colombia
@@ -29,12 +31,22 @@
     - android
     - apple
 
-- name: SoffyNet
-  description: An App to place orders to nearby stores. Currently operating in Colombia
-  cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/Productos.jpg
-  url: https://soffynet.com
-  page: soffy
+- name: ADM
+  description: A basic POS software to help small businesses take control of their sales
+  cover: ../assets/img/projects/adm.jpg
+  url: https://github.com/LuisHCK/administracion
+  page:
+  stack:
+    - django
+    - html5
+
+
+
+- name: Tubefy
+  description: A PWA Music player based on your Youtube Playlists
+  cover: ../assets/img/projects/Tubefy_Cover.jpg
+  url: https://luishck.github.io/tubefy
+  page: tubefy
   stack:
     - vuejs
     - html5
-    - rails
