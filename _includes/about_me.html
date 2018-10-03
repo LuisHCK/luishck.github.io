@@ -14,7 +14,7 @@
   <div class="columns is-mobile is-multiline is-centered">
     {% for backend in site.data.skills[0].backend %}
     <div class="column is-one-quarter-desktop">
-      {% include components/skill_card.html skill=backend %}
+      {% include /components/skill_card.html skill=backend %}
     </div>
     {% endfor %}
   </div>
@@ -23,7 +23,7 @@
   <div class="columns is-mobile is-multiline is-centered">
     {% for frontend in site.data.skills[1].frontend %}
     <div class="column is-one-quarter-desktop">
-      {% include components/skill_card.html skill=frontend %}
+      {% include /components/skill_card.html skill=frontend %}
     </div>
     {% endfor %}
   </div>
