@@ -1,7 +1,7 @@
 ---
 - name: Encuentra Cuarto (App Concept)
   description: An app that helps to rent rooms easily and free of charge
-  cover: ../assets/img/projects/encuentra_screenshots/cover.jpg
+  cover: /assets/img/projects/encuentra_screenshots/cover.jpg
   url:
   page: encuentra
   stack:
@@ -21,9 +21,9 @@
 
 - name: DomiTiendas
   description: An App to place orders to nearby stores. Currently operating in Colombia
-  cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/domitiendas.jpg
+  cover: /assets/img/projects/domi_screenshots/cover.jpg
   url: https://domitiendas.co
-  page: 
+  page: domitiendas
   stack:
     - angularjs
     - html5
@@ -33,7 +33,7 @@
 
 - name: ADM
   description: A basic POS software to help small businesses take control of their sales
-  cover: ../assets/img/projects/adm.jpg
+  cover: /assets/img/projects/adm.jpg
   url: https://github.com/LuisHCK/administracion
   page:
   stack:
@@ -44,7 +44,7 @@
 
 - name: Tubefy
   description: A PWA Music player based on your Youtube Playlists
-  cover: ../assets/img/projects/Tubefy_Cover.jpg
+  cover: /assets/img/projects/Tubefy_Cover.jpg
   url: https://luishck.github.io/tubefy
   page: tubefy
   stack:
