@@ -40,13 +40,14 @@
       <div class="page-links">
         <a id="portfolio_btn">Portfolio</a>
         <a id="blog_btn">Blog</a>
+        <a id="blog_btn">Pricing</a>
         <a id="about_me_btn">About me</a>
       </div>
     </div>
   </header>
 
   <section id="portfolio" class="portfolio">
-    <h1 class="title is-2">Portfolio</h1>
+    <h2 class="title is-2">Portfolio</h2>
     <div class="columns is-mobile is-multiline">
       {% for project in site.data.projects %}
       <!-- Include component -->
@@ -64,7 +65,7 @@
   </section>
 
   <section id="blog" class="blog-posts">
-    <h1 class="title is-2">Posts</h1>
+    <h2 class="title is-2 has-text-white">Posts</h2>
     <div class="columns is-mobile is-multiline">
       {% for post in site.posts limit:3 %} {% include /components/post_card.html post=post %} {% endfor %}
       <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
@@ -81,8 +82,14 @@
   </section>
 
   <section id="aboutme" class="about-me">
-    <h1 class="title is-2">About me</h1>
+    <h2 class="title is-2">About me</h2>
     {% include about_me.html %}
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2 class="title is-2 has-text-white">Pricing</h2>
+    {% include pricing.html %}
+
   </section>
 
   <script src="assets/js/main.js"></script>

@@ -13,7 +13,7 @@
   <h3 class="title is-4">Backend Frameworks</h3>
   <div class="columns is-mobile is-multiline is-centered">
     {% for backend in site.data.skills[0].backend %}
-    <div class="column is-one-quarter-desktop">
+    <div class="column is-full-mobile is-one-quarter-desktop">
       {% include /components/skill_card.html skill=backend %}
     </div>
     {% endfor %}
@@ -22,7 +22,7 @@
   <h3 class="title is-4">Frontend Frameworks & Tools</h3>
   <div class="columns is-mobile is-multiline is-centered">
     {% for frontend in site.data.skills[1].frontend %}
-    <div class="column is-one-quarter-desktop">
+    <div class="column is-full-mobile is-one-quarter-desktop">
       {% include /components/skill_card.html skill=frontend %}
     </div>
     {% endfor %}
@@ -31,7 +31,7 @@
   <h3 class="title is-4">Desktop</h3>
   <div class="columns is-mobile is-multiline is-centered">
     {% for desktop in site.data.skills[2].desktop %}
-    <div class="column is-one-quarter-desktop">
+    <div class="column is-full-mobile is-one-quarter-desktop">
       {% include components/skill_card.html skill=desktop %}
     </div>
     {% endfor %}
@@ -40,7 +40,7 @@
   <h3 class="title is-4">Mobile</h3>
   <div class="columns is-mobile is-multiline is-centered">
     {% for mobile in site.data.skills[3].mobile %}
-    <div class="column is-one-quarter-desktop">
+    <div class="column is-full-mobile is-one-quarter-desktop">
       {% include components/skill_card.html skill=mobile %}
     </div>
     {% endfor %}

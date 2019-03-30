@@ -17,10 +17,13 @@ section {
   text-align: center;
   color: white;
   padding: 8px;
+  display: flex;
 }
 
 .site-header .header-content {
   color: white;
+  display: flex;
+  flex-direction: column;
   padding-top: 10%;
 }
 
@@ -43,6 +46,10 @@ section {
   padding-bottom: 25px;
 }
 
+.social-links {
+  margin-top: 10%;
+}
+
 .social-link {
   font-size: 22pt;
   color: white;
@@ -53,14 +60,15 @@ section {
 }
 
 .page-links {
-  padding-top: 10%;
+  flex-grow: 1;
   display: flex;
+  align-items: center;
   justify-content:space-between;
 }
 
 .page-links a {
   color: white;
-  font-size: 14pt;
+  font-size: 13pt;
 }
 
 .page-links a:hover {
@@ -71,7 +79,7 @@ section {
   padding: 10px;
 }
 
-section.blog-posts {
+section.blog-posts, section.pricing {
   background-color: #263238;
 }
 
@@ -97,4 +105,36 @@ img.profile-pic {
   height: 180px;
   width: auto;
   border-radius: 200px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.pricing-card {
+  min-height: 350px;
+  border-radius: 8px;
+  background-color: white;
+  width: 320px;
+  text-align: center;
+}
+
+
+.pricing-card .pricing-card-header {
+  padding: 10px;
+}
+.pricing-card .main-price {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.items-list {
+  padding: 0px 10px 10px 10px;
+}
+
+.pricing-items .items-list li {
+  padding: 10px 10px 10px 10px;
+  list-style: none;
 }
