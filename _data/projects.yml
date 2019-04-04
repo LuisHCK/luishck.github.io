@@ -9,6 +9,15 @@
     - apple
     - vuejs
 
+- name: QrDize
+  description: A free and OpenSource PWA QR Code Reader
+  cover: /assets/img/projects/qrdize/cover.jpeg
+  url: http://qrdize.netlify.com
+  page: qrdize
+  stack:
+    - vuejs
+    - html5
+
 - name: SoffyNet
   description: An App to place orders to nearby stores. Currently operating in Colombia
   cover: https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-937989723734/Productos.jpg
@@ -39,8 +48,6 @@
   stack:
     - django
     - html5
-
-
 
 - name: Tubefy
   description: A PWA Music player based on your Youtube Playlists
