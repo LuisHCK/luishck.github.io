@@ -267,14 +267,14 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-compose
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   jekyll-minifier
   jekyll-sitemap
   minima (~> 2.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.5.5p157
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   1.16.5
+   2.1.4
