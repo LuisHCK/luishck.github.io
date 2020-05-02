@@ -21,20 +21,38 @@ section {
 }
 
 .site-header .header-content {
-  color: white;
   display: flex;
-  flex-direction: column;
-  padding-top: 10%;
+  width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
-  .site-header .header-content {
-    padding-left: 20%;
-    padding-right: 20%;
+.site-description {
+  font-size: 14pt;
+}
+
+.main-info {
+  justify-content: center;
+  align-items: center;
+}
+
+.main-info .info-content {
+  width: 30%;
+}
+
+.main-info h1 {
+  font-weight: bold;
+}
+
+.main-info h2 {
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-info .info-content {
+    width: 100%;
   }
-  .site-header p {
-    font-size: 16pt;
-    line-height: 2;
+  .social-link {
+    font-size: 18pt !important;
   }
 }
 
@@ -42,12 +60,29 @@ section {
   font-style: bold;
   font-size: 34pt;
 }
+
 .site-header p {
   padding-bottom: 25px;
 }
 
+.site-header .nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.nav-bar img.logo {
+  height: 48px;
+  width: auto;
+  margin-right: 8px;
+}
+
 .social-links {
-  margin-top: 10%;
+  width: 100%;
+  justify-content: flex-end;
+  text-align: right;
 }
 
 .social-link {
@@ -55,6 +90,7 @@ section {
   color: white;
   padding: 4%;
 }
+
 .social-link:hover {
   color: rgb(228, 228, 228);
 }
@@ -63,23 +99,31 @@ section {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: center;
 }
 
 .page-links a {
   color: white;
   font-size: 13pt;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 .page-links a:hover {
   color: rgb(102, 102, 245);
+  text-decoration: underline;
+}
+
+.page-links a:nth-child(even) {
+  margin: 0px 50px;
 }
 
 section {
   padding: 10px;
 }
 
-section.blog-posts, section.pricing {
+section.blog-posts,
+section.pricing {
   background-color: #263238;
 }
 
@@ -97,7 +141,8 @@ section.portfolio .card i {
   margin: 0;
 }
 
-.center-text, .text-centered {
+.center-text,
+.text-centered {
   text-align: center;
 }
 
@@ -112,7 +157,6 @@ img.profile-pic {
   justify-content: space-around;
 }
 
-
 .pricing-card {
   min-height: 350px;
   border-radius: 8px;
@@ -120,7 +164,6 @@ img.profile-pic {
   width: 320px;
   text-align: center;
 }
-
 
 .pricing-card .pricing-card-header {
   padding: 10px;
@@ -137,4 +180,33 @@ img.profile-pic {
 .pricing-items .items-list li {
   padding: 10px 10px 10px 10px;
   list-style: none;
+}
+
+/* Flex classes */
+.is-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
 }
