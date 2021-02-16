@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v1
       - run: yarn install
       - run: yarn build
-      - run: mkdir docs
+      - run: rm -f docs && mkdir docs
       - run: npx next export -o ./docs
         env:
             CI: true
