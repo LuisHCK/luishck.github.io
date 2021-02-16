@@ -23,12 +23,12 @@ jobs:
         uses: actions/setup-node@v1
       - run: yarn install
       - run: yarn build
+      - run: mkdir build
         env:
             CI: true
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
-        run: mkdir build
         with:
           GITHUB_TOKEN: ${{ secrets.token }}
           BRANCH: gh-pages # The branch the action should deploy to.
