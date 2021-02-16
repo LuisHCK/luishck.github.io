@@ -25,6 +25,7 @@ jobs:
       - run: yarn build
       - run: rm -f docs && mkdir docs
       - run: npx next export -o ./docs
+      - run: touch ./docs/.nojekyll
         env:
             CI: true
 
