@@ -1,21 +1,35 @@
-import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Profile } from '../../data'
+import React, { useState } from "react";
+import Link from "next/link";
+import { Profile } from "../../data";
 
 function NavBar() {
-    const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-    const toggleMenu = () => setMenuIsOpen((prev) => !prev)
+    const toggleMenu = () => setMenuIsOpen((prev) => !prev);
 
-    const navbarMenuClassNames = ['navbar-menu', menuIsOpen ? 'open' : 'closed'].join(' ')
+    const navbarMenuClassNames = [
+        "navbar-menu",
+        menuIsOpen ? "open" : "closed",
+    ].join(" ");
 
     return (
-        <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
+        <nav
+            className="navbar is-dark"
+            role="navigation"
+            aria-label="main navigation"
+        >
             <div className="navbar-brand">
                 <Link href="/" passHref>
-                    <a className="navbar-item has-text-weight-bold" aria-label={Profile.name}>
-                        <Image src="/images/logo.png" height={28} width={28} alt={Profile.name} />
+                    <a
+                        className="navbar-item has-text-weight-bold"
+                        aria-label={Profile.name}
+                    >
+                        <img
+                            src="/images/logo.png"
+                            height={28}
+                            width={28}
+                            alt={Profile.name}
+                        />
                     </a>
                 </Link>
 
@@ -45,9 +59,9 @@ function NavBar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-NavBar.propTypes = {}
+NavBar.propTypes = {};
 
-export default NavBar
+export default NavBar;
