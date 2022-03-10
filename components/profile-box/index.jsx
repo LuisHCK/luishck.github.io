@@ -22,8 +22,6 @@ function ProfileBox(props) {
                     className="ProfileBox-avatar"
                     width={200}
                     height={200}
-                    objectFit="cover"
-                    className="ProfileBox-avatar"
                 />
             </div>
 

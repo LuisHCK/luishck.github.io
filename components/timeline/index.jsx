@@ -13,6 +13,7 @@ function TimeLine(props) {
                     subtitle={row.subtitle}
                     date={row.date}
                     location={row.location}
+                    website={row.website}
                 />
             </li>
         ))

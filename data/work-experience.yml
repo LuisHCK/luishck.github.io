@@ -1,20 +1,33 @@
 ---
+- title: Fullstack Web Developer
+  subtitle: Growth Acceleration Partners
+  website: https://www.growthaccelerationpartners.com
+  date: 2022
+  location: USA
+
+- title: React Web developer
+  subtitle: Applaudo Studios
+  website: https://www.applaudostudios.com
+  date: 2021 - 2022
+  location: El Salvador
+
 - title: React Web developer
   subtitle: Smart Business Solutions
-  date: jun. 2020 – today
+  website: https://www.smbssolutions.com
+  date: 2020 - 2021
   location: Nicaragua
 
 - title: Full Stack Web Developer
   subtitle: E2Outlook
-  date: oct. 2018 – 2020
+  date: oct. 2018 - 2020
   location: USA
 
 - title: Full Stack Web Developer
   subtitle: Goher Group
-  date: aug. 2017 – 2018
+  date: aug. 2017 - 2018
   location: Colombia
 
 - title: Web Developer
   subtitle: Freelance
-  date: 2016 – 2017
+  date: 2016 - 2017
   location: Nicaragua
