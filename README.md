@@ -1,3 +1,3 @@
 ## My online portfolio
 
-![screenshot-v1](https://i.ibb.co/xfLRcY4/e0a17486-7745-4561-5275-307aee3c8471.png)
+![Luis-J-Centeno-Full-Stack-Web-Developer](https://user-images.githubusercontent.com/5175137/159013022-5694e946-9f5a-4a62-8211-867529b3f3c2.png)
