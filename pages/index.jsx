@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import ProfileBox from '../components/profile-box'
 import MainLayout from '../layouts/main-layout'
 import AboutMeBox from '../components/about-me-box'

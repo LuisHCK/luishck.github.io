@@ -1,16 +1,18 @@
 .ProjectPage {
+
     // Reset defaults
     h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 0.5em;
         margin-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5rem;
+        font-size: 1.5em;
+        border-bottom: 1px solid #303030;
     }
 
     p {
@@ -20,6 +22,8 @@
     ol,
     ul {
         padding-inline-start: 1.5em;
+        list-style: disc outside;
+        margin-top: 1em;
 
         p {
             margin-top: 0.5em;

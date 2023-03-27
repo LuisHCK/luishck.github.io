@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectLayout from '../../layouts/project-layout'
 import { getProjectStaticProps } from '../../utils'
 
-const SLUG = 'marvelous-app'
+const SLUG = 'trivia'
 
 const MarvelousProject = ({ project, content }) => {
     return (

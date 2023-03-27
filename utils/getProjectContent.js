@@ -1,17 +1,17 @@
 import { ReactNode } from 'react'
-import marked from 'marked'
-import parse from 'html-react-parser'
+import { marked } from 'marked'
 import { markdownFetch } from '.'
 
 /**
  * Fetch and parse markdown url to react component
  * @param {String} contentURL
- * @returns {ReactNode}
+ * @returns {Promise<string>}
  */
 const getProjectContent = async (contentURL) => {
-    const markdownString = await markdownFetch(contentURL)
-    const htmlContent = marked(markdownString || '')
-    return parse(htmlContent || '')
+    const response = await markdownFetch(contentURL)
+    const rawContent = await response.text() || ''
+    const htmlContent = marked(rawContent)
+    return htmlContent
 }
 
 export default getProjectContent

@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import { AtOutline, LocationOutline } from "react-ionicons";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import { AtOutline, LocationOutline } from 'react-ionicons'
 
 function ProfileBox(props) {
-    const { name, role, email, country, skills, avatar } = props;
+    const { name, role, email, country, skills, avatar } = props
 
     const renderSkills = () =>
         skills.map((skill, index) => (
-            <li key={"skill-" + index} className="ProfileBox-listItem">
+            <li key={'skill-' + index} className="ProfileBox-listItem">
                 {skill}
             </li>
-        ));
+        ))
 
     return (
         <section className="box ProfileBox">
@@ -25,9 +25,7 @@ function ProfileBox(props) {
                 />
             </div>
 
-            <h1 className="ProfileBox-name is-size-2 has-text-weight-bold">
-                {name}
-            </h1>
+            <h1 className="ProfileBox-name is-size-2 has-text-weight-bold">{name}</h1>
             <h2 className="ProfileBox-role is-size-5">{role}</h2>
 
             <div className="ProfileBox-contact">
@@ -35,8 +33,8 @@ function ProfileBox(props) {
                 <ul>
                     <li className="ProfileBox-listItem">
                         <AtOutline width="22px" color="white" />
-                        <Link href={`mailto:${email}`} passHref>
-                            <a target="_blank">{email}</a>
+                        <Link href={`mailto:${email}`} target="_blank">
+                            {email}
                         </Link>
                     </li>
 
@@ -52,25 +50,25 @@ function ProfileBox(props) {
                 <ul>{renderSkills()}</ul>
             </div>
         </section>
-    );
+    )
 }
 
 ProfileBox.defaultProps = {
-    name: "Jhon Doe",
-    role: "Senior Web developer",
-    email: "jdoe@company.com",
-    country: "Hyrule Kingdom",
+    name: 'Jhon Doe',
+    role: 'Senior Web developer',
+    email: 'jdoe@company.com',
+    country: 'Hyrule Kingdom',
     skills: [
-        "CI/CD",
-        "Web development",
-        "Mobile development",
-        "SCRUM",
-        "TDD",
-        "Initiatives to hangout with the team",
-        "Passion for teaching",
+        'CI/CD',
+        'Web development',
+        'Mobile development',
+        'SCRUM',
+        'TDD',
+        'Initiatives to hangout with the team',
+        'Passion for teaching'
     ],
-    avatar: "/images/avatar.png",
-};
+    avatar: '/images/avatar.png'
+}
 
 ProfileBox.propTypes = {
     name: PropTypes.string,
@@ -78,7 +76,7 @@ ProfileBox.propTypes = {
     email: PropTypes.string,
     country: PropTypes.string,
     skills: PropTypes.array,
-    avatar: PropTypes.string,
-};
+    avatar: PropTypes.string
+}
 
-export default ProfileBox;
+export default ProfileBox
