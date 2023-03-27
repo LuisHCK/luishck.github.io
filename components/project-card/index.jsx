@@ -15,10 +15,13 @@ function ProjectCard(props) {
     const renderLinks = () =>
         links.map((link, index) => (
             <div className="card-footer-item" key={'project-link-' + index}>
-                <Link href={link.url} passHref>
-                    <a className="has-text-centered" target={link.target} rel={link.rel}>
-                        {link.label}
-                    </a>
+                <Link
+                    href={link.url}
+                    className="has-text-centered"
+                    target={link.target}
+                    rel={link.rel}
+                >
+                    {link.label}
                 </Link>
             </div>
         ))
@@ -55,9 +58,9 @@ ProjectCard.propTypes = {
         PropTypes.shape({
             label: PropTypes.string,
             url: PropTypes.string,
-            target: PropTypes.string,
+            target: PropTypes.string
         })
-    ),
+    )
 }
 
 ProjectCard.defaultProps = {
@@ -67,8 +70,8 @@ ProjectCard.defaultProps = {
     stack: [REACT],
     links: [
         { label: 'Read more', url: '/projects/1' },
-        { label: 'View on GitHub', url: 'https://github.com', target: '_blank' },
-    ],
+        { label: 'View on GitHub', url: 'https://github.com', target: '_blank' }
+    ]
 }
 
 export default ProjectCard

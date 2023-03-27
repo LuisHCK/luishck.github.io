@@ -9,37 +9,33 @@ import {
     LogoPython,
     LogoReact,
     LogoVue,
+    LogoGithub
 } from 'react-ionicons'
 
 function DevIcon(props) {
     const { name, color, height, width } = props
+    const logoProps = {
+        color,
+        height,
+        width
+    }
 
-    switch (name) {
-        case REACT:
-            return <LogoReact color={color} height={height} width={width} />
+    const logos = {
+        REACT: <LogoReact {...logoProps} />,
+        VUE: <LogoVue {...logoProps} />,
+        ANDROID: <LogoAndroid {...logoProps} />,
+        JAVASCRIPT: <LogoJavascript {...logoProps} />,
+        NODEJS: <LogoNodejs {...logoProps} />,
+        ANGULAR: <LogoAngular {...logoProps} />,
+        PYTHON: <LogoPython {...logoProps} />,
+        APPLE: <LogoApple {...logoProps} />,
+        GITHUB: <LogoGithub />
+    }
 
-        case VUE:
-            return <LogoVue color={color} height={height} width={width} />
-
-        case ANDROID:
-            return <LogoAndroid color={color} height={height} width={width} />
-
-        case JAVASCRIPT:
-            return <LogoJavascript color={color} height={height} width={width} />
-
-        case NODEJS:
-            return <LogoNodejs color={color} height={height} width={width} />
-
-        case ANGULAR:
-            return <LogoAngular color={color} height={height} width={width} />
-
-        case PYTHON:
-            return <LogoPython color={color} height={height} width={width} />
-
-        case APPLE:
-            return <LogoApple color={color} height={height} width={width} />
-        default:
-            return <span></span>
+    try {
+        return logos[name]
+    } catch (error) {
+        console.error(`Logo whith name: "${name}" can't be found!`)
     }
 }
 
@@ -47,13 +43,13 @@ DevIcon.propTypes = {
     name: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.string
 }
 
 DevIcon.defaultProps = {
     height: '32px',
     width: '32px',
-    color: 'white',
+    color: 'white'
 }
 
 export default DevIcon
