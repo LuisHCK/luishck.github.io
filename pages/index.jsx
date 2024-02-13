@@ -26,10 +26,8 @@ const Home = () => {
                     <div className="column HomePage-scrollContainer">
                         <div className="HomePage-scrollArea">
                             <AboutMeBox description={Profile.about} />
-
-                            <ProjectsBox projects={Projects} />
-
                             <WorkExperience jobs={WorkExp} />
+                            <ProjectsBox projects={Projects} />
                         </div>
                     </div>
                 </div>

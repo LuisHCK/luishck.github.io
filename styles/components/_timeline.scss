@@ -23,6 +23,10 @@
             border-radius: 32px;
         }
 
+        &:last-child {
+            border-bottom: none;
+        }
+
         &:not(&:last-child) {
             &::after {
                 content: ' ';
