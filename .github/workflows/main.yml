@@ -26,8 +26,6 @@ jobs:
 
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn build
-      - run: mkdir out
-      - run: yarn run next export -o ./out
       - run: touch ./out/.nojekyll
         env:
             CI: true
