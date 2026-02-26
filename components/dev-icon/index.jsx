@@ -12,8 +12,12 @@ import {
     LogoGithub
 } from 'react-ionicons'
 
-function DevIcon(props) {
-    const { name, color, height, width } = props
+function DevIcon({
+    name,
+    color,
+    height,
+    width,
+}) {
     const logoProps = {
         color,
         height,
@@ -46,11 +50,6 @@ DevIcon.propTypes = {
     color: PropTypes.string
 }
 
-DevIcon.defaultProps = {
-    height: '32px',
-    width: '32px',
-    color: 'white'
-}
 
 export default DevIcon
 

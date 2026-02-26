@@ -2,8 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ProjectCard from '../project-card'
 
-function ProjectsBox(props) {
-    const { title, description, projects } = props
+function ProjectsBox({
+    title,
+    description,
+    projects,
+}) {
 
     const renderProjects = () =>
         projects.map((project, index) => (
@@ -34,10 +37,5 @@ ProjectsBox.propTypes = {
     projects: PropTypes.array,
 }
 
-ProjectsBox.defaultProps = {
-    title: 'Projects I have worked on 👨‍💻',
-    description: `Check out these great projects that I have developed`,
-    projects: [],
-}
 
 export default ProjectsBox

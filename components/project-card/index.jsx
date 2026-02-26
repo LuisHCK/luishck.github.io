@@ -4,8 +4,13 @@ import DevIcon, { REACT } from '../dev-icon'
 import Link from 'next/link'
 import parse from 'html-react-parser'
 
-function ProjectCard(props) {
-    const { name, description, image, stack, links } = props
+function ProjectCard({
+    name,
+    description,
+    image,
+    stack,
+    links,
+}) {
 
     const renderStack = () =>
         stack.map((name, index) => (
@@ -63,15 +68,5 @@ ProjectCard.propTypes = {
     )
 }
 
-ProjectCard.defaultProps = {
-    name: 'Demo project',
-    description: 'Lorem ipsum dolor sit amet',
-    image: 'https://picsum.photos/600',
-    stack: [REACT],
-    links: [
-        { label: 'Read more', url: '/projects/1' },
-        { label: 'View on GitHub', url: 'https://github.com', target: '_blank' }
-    ]
-}
 
 export default ProjectCard

@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TimeLine from '../timeline'
 
-function WorkExperience(props) {
-    const { title, jobs } = props
+function WorkExperience({
+    title,
+    jobs,
+}) {
 
     return (
         <section className="box">
@@ -17,9 +19,5 @@ WorkExperience.propTypes = {
     title: PropTypes.string,
 }
 
-WorkExperience.defaultProps = {
-    title: 'My work experience 🐱‍👤',
-    jobs: [],
-}
 
 export default WorkExperience

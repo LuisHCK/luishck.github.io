@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Row from './row'
 
-function TimeLine(props) {
-    const { rows } = props
+function TimeLine({
+    rows,
+}) {
 
     const renderRows = () =>
         rows.map((row, index) => (
@@ -29,8 +30,5 @@ TimeLine.propTypes = {
     rows: PropTypes.array,
 }
 
-TimeLine.defaultProps = {
-    rows: [],
-}
 
 export default TimeLine

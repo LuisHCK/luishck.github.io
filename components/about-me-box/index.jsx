@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 function AboutMeBox(props) {
@@ -34,12 +33,5 @@ AboutMeBox.propTypes = {
     }),
 }
 
-AboutMeBox.defaultProps = {
-    title: 'About me 😎',
-    description: `A passionate Full Stack Software Developer 🚀
-    having an experience of building Web and Mobile applications
-    with JavaScript / Reactjs / Nodejs / React Native and some
-    other cool libraries and frameworks.`,
-}
 
 export default AboutMeBox

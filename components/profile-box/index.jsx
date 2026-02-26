@@ -3,8 +3,14 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { AtOutline, LocationOutline } from 'react-ionicons'
 
-function ProfileBox(props) {
-    const { name, role, email, country, skills, avatar } = props
+function ProfileBox({
+    name,
+    role,
+    email,
+    country,
+    skills,
+    avatar,
+}) {
 
     const renderSkills = () =>
         skills.map((skill, index) => (
@@ -53,22 +59,6 @@ function ProfileBox(props) {
     )
 }
 
-ProfileBox.defaultProps = {
-    name: 'Jhon Doe',
-    role: 'Senior Web developer',
-    email: 'jdoe@company.com',
-    country: 'Hyrule Kingdom',
-    skills: [
-        'CI/CD',
-        'Web development',
-        'Mobile development',
-        'SCRUM',
-        'TDD',
-        'Initiatives to hangout with the team',
-        'Passion for teaching'
-    ],
-    avatar: '/images/avatar.png'
-}
 
 ProfileBox.propTypes = {
     name: PropTypes.string,

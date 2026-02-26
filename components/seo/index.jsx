@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 
-function SEO(props) {
-    const { title, description, image, url } = props
+function SEO({
+    title,
+    description,
+    image = '/images/cover.jpg',
+    url = 'https://luishck.github.io',
+}) {
 
     return (
         <Head>
@@ -32,11 +36,6 @@ SEO.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     url: PropTypes.string,
-}
-
-SEO.defaultProps = {
-    image: '/images/cover.jpg',
-    url: 'https://luishck.github.io',
 }
 
 export default SEO

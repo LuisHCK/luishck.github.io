@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Row(props) {
-    const { title, subtitle, date, location, website } = props;
+function Row({
+    title,
+    subtitle,
+    date,
+    location,
+    website
+}) {
 
     return (
         <div className="Timeline-row">
@@ -40,8 +45,5 @@ Row.propTypes = {
     website: PropTypes.string,
 };
 
-Row.defaultProps = {
-    website: undefined
-}
 
 export default Row;
