@@ -5,16 +5,7 @@ const path = require('path')
  */
 module.exports = {
     output: 'export',
-    distDir: 'out',
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
-    },
-
-    webpack: function (config) {
-        config.module.rules.push({
-            test: /\.ya?ml$/,
-            use: 'js-yaml-loader',
-        })
-        return config
     },
 }

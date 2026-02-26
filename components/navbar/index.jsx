@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { Profile } from '../../data'
 
@@ -42,6 +42,10 @@ function NavBar() {
 
                     <Link href="/projects" className="navbar-item">
                         Projects
+                    </Link>
+
+                    <Link href={Profile.cv} className="navbar-item" target="_blank" rel="noopener noreferrer">
+                        CV
                     </Link>
                 </div>
             </div>

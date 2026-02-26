@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-    LogoAndroid,
-    LogoAngular,
-    LogoApple,
-    LogoJavascript,
-    LogoNodejs,
-    LogoPython,
-    LogoReact,
-    LogoVue,
-    LogoGithub
-} from 'react-ionicons'
+    IconBrandAndroid,
+    IconBrandAngular,
+    IconBrandApple,
+    IconBrandJavascript,
+    IconBrandNodejs,
+    IconBrandPython,
+    IconBrandReact,
+    IconBrandVue,
+    IconBrandGithub
+} from '@tabler/icons-react'
 
 function DevIcon({
     name,
@@ -25,15 +25,15 @@ function DevIcon({
     }
 
     const logos = {
-        REACT: <LogoReact {...logoProps} />,
-        VUE: <LogoVue {...logoProps} />,
-        ANDROID: <LogoAndroid {...logoProps} />,
-        JAVASCRIPT: <LogoJavascript {...logoProps} />,
-        NODEJS: <LogoNodejs {...logoProps} />,
-        ANGULAR: <LogoAngular {...logoProps} />,
-        PYTHON: <LogoPython {...logoProps} />,
-        APPLE: <LogoApple {...logoProps} />,
-        GITHUB: <LogoGithub />
+        REACT: <IconBrandReact {...logoProps} />,
+        VUE: <IconBrandVue {...logoProps} />,
+        ANDROID: <IconBrandAndroid {...logoProps} />,
+        JAVASCRIPT: <IconBrandJavascript {...logoProps} />,
+        NODEJS: <IconBrandNodejs {...logoProps} />,
+        ANGULAR: <IconBrandAngular {...logoProps} />,
+        PYTHON: <IconBrandPython {...logoProps} />,
+        APPLE: <IconBrandApple {...logoProps} />,
+        GITHUB: <IconBrandGithub {...logoProps} />
     }
 
     try {

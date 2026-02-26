@@ -1,6 +1,6 @@
-import profile from './profile.yml'
-import projects from './projects.yml'
-import workExperience from './work-experience.yml'
+import profile from './profile.json'
+import projects from './projects.json'
+import workExperience from './work-experience.json'
 
 /**
  * @typedef DevProfile

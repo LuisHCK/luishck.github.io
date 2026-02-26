@@ -1,7 +1,6 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { AtOutline, LocationOutline } from 'react-ionicons'
+import { IconAt, IconMapPin } from '@tabler/icons-react'
 
 function ProfileBox({
     name,
@@ -38,14 +37,14 @@ function ProfileBox({
                 <span className="has-text-weight-bold">Contact</span>
                 <ul>
                     <li className="ProfileBox-listItem">
-                        <AtOutline width="22px" color="white" />
+                        <IconAt width="22px" color="white" />
                         <Link href={`mailto:${email}`} target="_blank">
                             {email}
                         </Link>
                     </li>
 
                     <li className="ProfileBox-listItem">
-                        <LocationOutline width="22px" color="white" />
+                        <IconMapPin width="22px" color="white" />
                         <span>{country}</span>
                     </li>
                 </ul>

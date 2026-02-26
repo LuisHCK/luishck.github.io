@@ -1,0 +1,17 @@
+{
+  "name": "Luis J. Centeno",
+  "title": "Sr. Software Engineer",
+  "photo": "/images/avatar.jpeg",
+  "about": "Experienced full-stack web developer with 7+ years of expertise in building dynamic, user-friendly web applications. Skilled in backend frameworks like Django, Ruby on Rails, and Node.js, as well as frontend technologies such as React, Vue, and Angular./nProficient in CI/CD, testing, Git, and agile methodologies./nThrives in remote, collaborative environments and is passionate about continuous learning and delivering exceptional user experiences.",
+  "short_desc": "Passionate full-stack web developer with many years of experience in web development",
+  "skils": [
+    "Certified AWS Cloud Practitioner",
+    "AI Driven Development",
+    "Full Stack Web Development",
+    "CI/CD",
+    "English (Fluent)"
+  ],
+  "email": "luisjcenteno@live.com",
+  "location": "Nicaragua",
+  "cv": "https://drive.google.com/file/d/1l-GxNTBttE7hEadNLvAz85DRkBH2QuM6/view?usp=sharing"
+}
