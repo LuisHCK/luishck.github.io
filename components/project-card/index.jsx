@@ -25,6 +25,8 @@ function ProjectCard({
                     className="has-text-centered"
                     target={link.target}
                     rel={link.rel}
+                    data-umami-event={`project_${link.label.toLowerCase()}_click`}
+                    data-umami-event-type="click"
                 >
                     {link.label}
                 </Link>
@@ -63,7 +65,8 @@ ProjectCard.propTypes = {
         PropTypes.shape({
             label: PropTypes.string,
             url: PropTypes.string,
-            target: PropTypes.string
+            target: PropTypes.string,
+            rel: PropTypes.string,
         })
     )
 }
