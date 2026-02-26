@@ -6,7 +6,7 @@ function SEO({
     title,
     description,
     image = '/images/cover.jpg',
-    url = 'https://luishck.github.io',
+    url = 'https://luisjcenteno.dev',
 }) {
 
     return (
