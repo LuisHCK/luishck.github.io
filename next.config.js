@@ -5,6 +5,7 @@ const path = require('path')
  */
 module.exports = {
     output: 'export',
+    poweredByHeader: false,
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
