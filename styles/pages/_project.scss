@@ -1,5 +1,16 @@
 .ProjectPage {
 
+    .project__cover {
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
     // Reset defaults
     h1 {
         padding-bottom: 0.5em;

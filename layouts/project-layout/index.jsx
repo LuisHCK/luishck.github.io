@@ -7,10 +7,17 @@ import GithubButton from '../../components/github-button'
 
 function ProjectLayout({ className, project, content }) {
     const githubLink = project.links?.find((link) => link.label === 'View on GitHub')?.url
+    const coverImage = typeof project.cover === 'string' ? project.cover : null
     return (
         <main className={`MainLayout ${className}`}>
             <NavBar />
             <div className="container is-max-desktop p-5">
+                    {coverImage && (
+                        <figure className="project__cover">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={coverImage} alt={`${project.name} cover image`} loading="lazy" />
+                        </figure>
+                    )}
                 <article className="box project">
                     <SEO
                         title={`${Profile.name} | ${project.name}`}

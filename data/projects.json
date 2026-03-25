@@ -1,97 +1,102 @@
 [
-  {
-    "name": "ADM2",
-    "slug": "adm2",
-    "description": "A Web App to manage your small store. Build with web technologies",
-    "stack": [
-      "vue"
-    ],
-    "content": "https://raw.githubusercontent.com/LuisHCK/adm2/master/README.md",
-    "cover": "https://raw.githubusercontent.com/LuisHCK/adm2/master/public/screenshots/30510e0b-5deb-4547-99c9-9b61aefb7587.jpeg",
-    "links": [
-      {
-        "label": "View on GitHub",
-        "url": "https://github.com/LuisHCK/adm2",
-        "target": "_blank",
-        "rel": "noreferrer"
-      },
-      {
-        "label": "Project details",
-        "url": "/projects/adm2"
-      }
-    ]
-  },
-  {
-    "name": "Marvelous App",
-    "slug": "marvelous-app",
-    "description": "A GatsbyJS test project that consumes Marvel's public API",
-    "stack": [
-      "react"
-    ],
-    "content": "https://raw.githubusercontent.com/LuisHCK/marvelous-app-test/main/README.md",
-    "cover": "https://i.ibb.co/jhTccxf/Iron-Man-2020-5-Marvelous-App.jpg",
-    "links": [
-      {
-        "label": "View on GitHub",
-        "url": "https://github.com/LuisHCK/marvelous-app-test",
-        "target": "_blank",
-        "rel": "noreferrer"
-      },
-      {
-        "label": "Demo",
-        "url": "https://marverlous-app-test.netlify.app/",
-        "target": "_blank",
-        "rel": "noreferrer"
-      },
-      {
-        "label": "Project details",
-        "url": "/projects/marvelous-app"
-      }
-    ]
-  },
-  {
-    "name": "TRIVIA!",
-    "slug": "trivia",
-    "description": "Real time Trivia app using Express + React + Socket.io + Yarn workspaces + MongoDB",
-    "stack": [
-      "react"
-    ],
-    "content": "https://raw.githubusercontent.com/LuisHCK/trivia/master/README.md",
-    "cover": "https://raw.githubusercontent.com/LuisHCK/trivia/master/packages/client/public/screenshots/cover.png",
-    "links": [
-      {
-        "label": "View on GitHub",
-        "url": "https://github.com/LuisHCK/trivia",
-        "target": "_blank",
-        "rel": "noreferrer"
-      },
-      {
-        "label": "Project details",
-        "url": "/projects/trivia"
-      },
-      {
-        "label": "PlayStore",
-        "url": "https://play.google.com/store/apps/details?id=app.netlify.apptrivia.twa",
-        "target": "_blank",
-        "rel": "noreferrer"
-      }
-    ]
-  },
-  {
-    "name": "SAMSON Manage",
-    "description": "Complete solution for Project Mangement for construction companies",
-    "stack": [
-      "angular",
-      "python"
-    ],
-    "cover": "https://samson-manage.com/wp-content/uploads/2020/01/82626476_175735640465152_185521455948103680_n.png",
-    "links": [
-      {
-        "label": "Demo",
-        "url": "https://app.samson-manage.com",
-        "target": "_blank",
-        "rel": "noreferrer"
-      }
-    ]
-  }
+    {
+        "name": "ADM2",
+        "slug": "adm2",
+        "order": 2,
+        "description": "A Web App to manage your small store. Build with web technologies",
+        "stack": ["vue"],
+        "content": "https://raw.githubusercontent.com/LuisHCK/adm2/master/README.md",
+        "cover": "https://raw.githubusercontent.com/LuisHCK/adm2/master/public/screenshots/30510e0b-5deb-4547-99c9-9b61aefb7587.jpeg",
+        "links": [
+            {
+                "label": "View on GitHub",
+                "url": "https://github.com/LuisHCK/adm2",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Project details",
+                "url": "/projects/adm2"
+            }
+        ]
+    },
+    {
+        "name": "Baby Tracker",
+        "slug": "baby-tracker",
+        "order": 1,
+        "description": "BabyTracker is a web app built with React that helps parents keep track of their baby's daily activities and milestones.",
+        "stack": ["react"],
+        "content": "https://raw.githubusercontent.com/LuisHCK/baby-tracker/refs/heads/main/README.md",
+        "cover": "/images/projects/baby-tracker-banner.jpg",
+        "links": [
+            {
+                "label": "View on GitHub",
+                "url": "https://github.com/LuisHCK/baby-tracker",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Demo",
+                "url": "https://babytracker.luisjcenteno.dev/app",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Project details",
+                "url": "/projects/baby-tracker"
+            }
+        ]
+    },
+    {
+        "name": "Memorias de Vida - Photo Studio",
+        "slug": "memorias-de-vida",
+        "description": "My wife's photo studio website, built with Nextjs and Tailwind CSS",
+        "stack": ["react"],
+        "content": "https://raw.githubusercontent.com/LuisHCK/mdv-next/refs/heads/main/README.md",
+        "cover": "/images/projects/memorias-de-vida-banner.jpg",
+        "links": [
+            {
+                "label": "View on GitHub",
+                "url": "https://github.com/LuisHCK/mdv-next",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Demo",
+                "url": "https://memoriasdevidafoto.com",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Project details",
+                "url": "/projects/memorias-de-vida"
+            }
+        ]
+    },
+    {
+        "name": "ContractFlow",
+        "slug": "contractflow",
+        "description": "Plan, budget, and track projects with confidence. Create, manage, and pay contractors with ease",
+        "stack": ["express", "postgres"],
+        "cover": "/images/projects/contractflow-banner.webp",
+        "content": "https://raw.githubusercontent.com/LuisHCK/contractflow/refs/heads/main/README.md",
+        "links": [
+            {
+                "label": "View on GitHub",
+                "url": "https://github.com/LuisHCK/contractflow",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Demo",
+                "url": "https://app.samson-manage.com",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Project details",
+                "url": "/projects/contractflow"
+            }
+        ]
+    }
 ]

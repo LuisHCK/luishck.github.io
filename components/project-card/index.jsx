@@ -37,6 +37,7 @@ function ProjectCard({
         <div className="ProjectCard card">
             <div className="card-image">
                 <figure className="image is-16by9">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="adjusted-image" src={image} alt={name} />
                 </figure>
             </div>

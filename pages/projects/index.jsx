@@ -27,6 +27,7 @@ function ProjectsPage() {
             <div className="container pt-5 pb-5">
                 <div className="box">
                     <h1 className="title">Projects 🚀</h1>
+                    <p className="subtitle is-6">Explore these builds and reach out if one sparks your next idea.</p>
                     <div className="columns is-mobile is-multiline">
                         {renderProjects()}
                     </div>
