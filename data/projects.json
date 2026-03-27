@@ -98,5 +98,31 @@
                 "url": "/projects/contractflow"
             }
         ]
+    },
+    {
+        "name": "Photo Print Tool",
+        "slug": "photo-print-tool",
+        "description": "Prepare precise photo print jobs with customizable paper and layout presets, exact physical dimensions, and browser-ready print output.",
+        "stack": ["react"],
+        "content": "https://raw.githubusercontent.com/LuisHCK/photo-print-tool/refs/heads/main/README.md",
+        "cover": "https://github.com/user-attachments/assets/09866340-b85f-4395-ad63-969f820d0d07",
+        "links": [
+            {
+                "label": "View on GitHub",
+                "url": "https://github.com/LuisHCK/photo-print-tool",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Demo",
+                "url": "https://photoprint.memoriasdevidafoto.com/",
+                "target": "_blank",
+                "rel": "noreferrer"
+            },
+            {
+                "label": "Project details",
+                "url": "/projects/photo-print-tool"
+            }
+        ]
     }
 ]
