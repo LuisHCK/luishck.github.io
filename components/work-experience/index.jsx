@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import TimeLine from '../timeline'
 
 function WorkExperience({
-    title,
+    title = 'Work Experience',
     jobs,
 }) {
 
@@ -17,6 +17,7 @@ function WorkExperience({
 
 WorkExperience.propTypes = {
     title: PropTypes.string,
+    jobs: PropTypes.array,
 }
 
 

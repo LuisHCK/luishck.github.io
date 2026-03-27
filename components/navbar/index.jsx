@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Profile } from '../../data'
+import { IconFileDownload } from '@tabler/icons-react'
 
 function NavBar() {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -56,13 +57,14 @@ function NavBar() {
 
                     <Link
                         href={Profile.cv}
-                        className="navbar-item"
+                        className="navbar-item is-flex is-align-items-center"
                         target="_blank"
                         rel="noopener noreferrer"
                         data-umami-event="cv_link_click"
                         data-umami-event-type="click"
                     >
-                        CV
+                        Resume
+                        <IconFileDownload width={18}/>
                     </Link>
                 </div>
             </div>

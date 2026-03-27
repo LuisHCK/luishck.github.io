@@ -38,4 +38,58 @@
             }
         }
     }
+
+    .Timeline-rowHeading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 0.4rem;
+        row-gap: 0.15rem;
+        margin-bottom: 0.35rem;
+
+        a {
+            color: $text;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .Timeline-role {
+        font-weight: 500;
+    }
+
+    .Timeline-separator {
+        color: transparentize($text, 0.4);
+    }
+
+    .Timeline-rowMeta {
+        color: transparentize($text, 0.25);
+        margin-bottom: 0.2rem;
+    }
+
+    .Timeline-rowClient {
+        font-style: italic;
+        color: transparentize($text, 0.25);
+        margin-bottom: 0.55rem;
+    }
+
+    .Timeline-rowHighlights {
+        list-style: disc;
+        margin: 0;
+        padding-left: 1.2rem;
+
+        li {
+            font-size: 14px;
+            border-bottom: none;
+            padding: 0;
+            margin-bottom: 0.3rem;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
 }

@@ -9,13 +9,7 @@ function TimeLine({
     const renderRows = () =>
         rows.map((row, index) => (
             <li key={'timeline-row-item' + index}>
-                <Row
-                    title={row.title}
-                    subtitle={row.subtitle}
-                    date={row.date}
-                    location={row.location}
-                    website={row.website}
-                />
+                <Row {...row} />
             </li>
         ))
 

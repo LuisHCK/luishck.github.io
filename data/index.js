@@ -45,10 +45,13 @@ export const Projects = projects
 
 /**
  * @typedef WorkExperience
- * @property {String} title
- * @property {String} subtitle
+ * @property {String} company
+ * @property {String} role
  * @property {String} date
  * @property {String} location
+ * @property {String} website
+ * @property {String} client
+ * @property {Array<String>} highlights
  */
 
 /**

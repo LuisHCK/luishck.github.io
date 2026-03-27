@@ -1,41 +1,46 @@
 [
   {
-    "title": "Fullstack Web Developer",
-    "subtitle": "Growth Acceleration Partners",
+    "company": "Growth Acceleration Partners",
+    "role": "Advanced Software Engineer",
     "website": "https://www.growthaccelerationpartners.com",
-    "date": "2022",
-    "location": "USA"
+    "date": "March 2022 - Present",
+    "location": "Remote, USA",
+    "client": "Saatva.com",
+    "highlights": [
+      "Played a key role in the migration from monolith to microservices/microfrontends with Next.js and GraphQL, improving deployment frequency by 40%.",
+      "Improved business outcomes through checkout optimization (+15% conversion) and Adyen migration (+5% transaction success)."
+    ]
   },
   {
-    "title": "React Web developer",
-    "subtitle": "Applaudo Studios",
-    "website": "https://www.applaudostudios.com",
-    "date": "2021 - 2022",
-    "location": "El Salvador"
-  },
-  {
-    "title": "React Web developer",
-    "subtitle": "Smart Business Solutions",
+    "company": "Talento (formerly Smart Business Solutions)",
+    "role": "Software Engineer",
     "website": "https://www.smbssolutions.com",
-    "date": "2020 - 2021",
-    "location": "Nicaragua"
+    "date": "June 2020 - April 2022",
+    "location": "Remote, USA",
+    "client": "Ceresa.com",
+    "highlights": [
+      "Built key e-learning features, including a 360 feedback tool and interactive video player, for 10,000+ active users.",
+      "Delivered responsive, accessible React interfaces with a 98% Lighthouse accessibility score."
+    ]
   },
   {
-    "title": "Full Stack Web Developer",
-    "subtitle": "E2Outlook",
-    "date": "oct. 2018 - 2020",
-    "location": "USA"
+    "company": "E2Outlook",
+    "role": "Full-Stack Web Developer",
+    "date": "October 2018 - May 2020",
+    "location": "USA",
+    "highlights": [
+      "Built core SaaS modules for construction management, including authentication, multi-tenancy, and role-based access for 50+ enterprise clients.",
+      "Implemented timesheets and automated reporting, reducing manual work by 10+ hours per week."
+    ]
   },
   {
-    "title": "Full Stack Web Developer",
-    "subtitle": "Goher Group",
-    "date": "aug. 2017 - 2018",
-    "location": "Colombia"
-  },
-  {
-    "title": "Web Developer",
-    "subtitle": "Freelance",
-    "date": "2016 - 2017",
-    "location": "Nicaragua"
+    "company": "Goher Group",
+    "role": "Full-Stack Web Developer",
+    "date": "August 2017 - October 2018",
+    "location": "Colombia",
+    "highlights": [
+      "Built a full-stack e-commerce platform for on-demand delivery with a Ruby on Rails API and customer-facing frontend.",
+      "Implemented real-time order tracking, inventory management, and secure payment integrations."
+    ]
   }
 ]
