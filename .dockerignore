@@ -8,3 +8,4 @@ dist
 .vscode
 README.md
 ASTRO_MIGRATION_PLAN.md
+compose.yaml

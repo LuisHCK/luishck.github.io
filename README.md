@@ -17,6 +17,21 @@ bun run build     # static output in dist/
 bun run preview   # preview the production build
 ```
 
+## Docker Compose
+
+```sh
+docker compose up --build -d   # http://localhost:8080
+docker compose logs -f
+docker compose down
+```
+
+The compose stack builds the Astro site and serves it with Nginx. Override the published port
+or canonical site URL with environment variables:
+
+```sh
+PORT=3000 SITE_URL=https://staging.example.com docker compose up --build -d
+```
+
 ## Deployment hardening
 
 - Static output is generated with `astro build` and served by Nginx in Docker.

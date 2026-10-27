@@ -1,0 +1,25 @@
+name: luisjcenteno-portfolio
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SITE_URL: ${SITE_URL:-https://luisjcenteno.dev}
+    image: luisjcenteno/portfolio:local
+    container_name: luisjcenteno-portfolio
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
