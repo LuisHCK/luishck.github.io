@@ -1,3 +1,22 @@
+---
+name: "Memorias de Vida - Photo Studio"
+description: "My wife's photo studio website, built with Nextjs and Tailwind CSS"
+order: 3
+stack:
+  - "react"
+cover: "../../assets/projects/memorias-de-vida-banner.jpg"
+links:
+  - label: "View on GitHub"
+    url: "https://github.com/LuisHCK/mdv-next"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Demo"
+    url: "https://memoriasdevidafoto.com"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Project details"
+    url: "/projects/memorias-de-vida"
+---
 # Memorias de Vida - Photo Studio
 
 Welcome to the official repository for the Memorias de Vida website, a professional photo studio. This project is designed to showcase our work, manage client sessions, and streamline the reservation process.

@@ -1,3 +1,23 @@
+---
+name: "ContractFlow"
+description: "Plan, budget, and track projects with confidence. Create, manage, and pay contractors with ease"
+order: 4
+stack:
+  - "express"
+  - "postgres"
+cover: "../../assets/projects/contractflow-banner.webp"
+links:
+  - label: "View on GitHub"
+    url: "https://github.com/LuisHCK/contractflow"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Demo"
+    url: "https://contractflow.luisjcenteno.dev"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Project details"
+    url: "/projects/contractflow"
+---
 # ContractFlow - Streamline Your Project Payments 🚀
 
 ## Description

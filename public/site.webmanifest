@@ -1,0 +1,18 @@
+{
+    "name": "Luis J. Centeno | Sr. Software Engineer",
+    "short_name": "Luis J. Centeno",
+    "description": "Portfolio of Luis J. Centeno, Sr. Software Engineer",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#2b3041",
+    "theme_color": "#1f2330",
+    "icons": [
+        {
+            "src": "/images/logo.png",
+            "sizes": "200x200",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

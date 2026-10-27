@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import ProjectCard from '../../components/project-card/ProjectCard.astro'
-import { Profile, Projects } from '../../data'
-import { getProjectCover } from '../../data/covers'
+import { Profile } from '../../data'
+import { getProjects } from '../../data/projects'
+
+const projects = await getProjects()
 ---
 <BaseLayout
     className="ProjectsPage"
@@ -17,14 +19,14 @@ import { getProjectCover } from '../../data/covers'
             </p>
 
             <div class="columns is-mobile is-multiline">
-                {Projects.map((project) => (
+                {projects.map((project) => (
                     <div class="column is-half-desktop is-full-mobile">
                         <ProjectCard
-                            name={project.name}
-                            description={project.description}
-                            stack={project.stack}
-                            image={getProjectCover(project.slug) ?? project.cover}
-                            links={project.links}
+                            name={project.data.name}
+                            description={project.data.description}
+                            image={project.data.cover}
+                            stack={project.data.stack}
+                            links={project.data.links}
                         />
                     </div>
                 ))}

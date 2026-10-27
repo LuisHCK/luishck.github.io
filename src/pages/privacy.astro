@@ -11,54 +11,68 @@ import { Profile } from '../data'
         <h1 class="title is-1">Privacy Policy</h1>
 
         <p>
-            <strong>Effective Date:</strong> May 2024
+            <strong>Effective Date:</strong> October 2026
         </p>
         <p>
-            <strong>{Profile.name}</strong> values your privacy and is committed to
-            protecting your personal information. This Privacy Policy outlines how
-            we collect, use, and protect your data.
+            This is the personal portfolio of <strong>{Profile.name}</strong>. It is a
+            static website: there are no accounts, login forms, comments, or
+            user-submitted content.
         </p>
 
         <h2 class="title is-4 mb-0">Information Collection</h2>
         <p>
-            We may collect personal information such as your name, email address,
-            and contact details when you interact with our website or services.
+            The site does not ask for or store personal information. Like most web
+            servers, the hosting provider may record standard request data such as
+            IP address, user agent, requested URL, and timestamp for security and
+            operational purposes.
+        </p>
+
+        <h2 class="title is-4 mb-0">Analytics</h2>
+        <p>
+            This site uses Umami, a privacy-focused, cookieless analytics service, to
+            understand aggregate page views and referrers. Umami does not use cookies
+            and is not intended to identify individual visitors.
+        </p>
+
+        <h2 class="title is-4 mb-0">Cookies</h2>
+        <p>
+            This site does not set cookies. Third-party sites linked from this
+            portfolio may set their own cookies under their respective policies.
+        </p>
+
+        <h2 class="title is-4 mb-0">External Links</h2>
+        <p>
+            Links to GitHub, project demos, and other external websites are provided
+            for convenience. I am not responsible for the content or privacy practices
+            of those sites.
         </p>
 
         <h2 class="title is-4 mb-0">Use of Information</h2>
         <p>
-            The information we collect is used solely to provide and improve our
-            services, communicate with you, and enhance your experience with
-            {Profile.name}.
+            Any operational data is used only to keep the site secure, diagnose
+            problems, and understand aggregate traffic. It is not sold, traded, or
+            used for advertising.
         </p>
 
         <h2 class="title is-4 mb-0">Data Protection</h2>
         <p>
-            We implement appropriate security measures to protect your personal
-            information from unauthorized access, alteration, or disclosure.
+            Reasonable security measures are used to protect the site and its
+            infrastructure. No method of transmission or storage is completely secure,
+            but no personal data is intentionally collected through this site.
         </p>
 
-        <h2 class="title is-4 mb-0">No Sale or Misuse of Data</h2>
+        <h2 class="title is-4 mb-0">Contact</h2>
         <p>
-            {Profile.name} will never sell, trade, or misuse your personal
-            information. We are committed to maintaining your trust and ensuring
-            your data is used only for legitimate business purposes.
+            Questions about this policy can be sent to
+            <a href={`mailto:${Profile.email}`}>{Profile.email}</a>.
         </p>
 
-        <h2 class="title is-4 mb-0">Contact Us</h2>
+        <h2 class="title is-4 mb-0">Changes to This Policy</h2>
         <p>
-            If you have any questions or concerns about our Privacy Policy, please
-            contact us at <a href={`mailto:${Profile.email}`}>{Profile.email}</a>.
+            This policy may be updated if the site changes. Changes will be posted on
+            this page with a new effective date.
         </p>
 
-        <h2 class="title is-4 mb-0">Changes to Privacy Policy</h2>
-        <p>
-            We may update this Privacy Policy from time to time. Any changes will be
-            posted on this page with an updated effective date.
-        </p>
-        <p>
-            By using our services, you agree to the terms of this Privacy Policy.
-        </p>
         <p>
             <strong>{Profile.name}</strong>
         </p>

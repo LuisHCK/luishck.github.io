@@ -1,3 +1,22 @@
+---
+name: "Photo Print Tool"
+description: "Prepare precise photo print jobs with customizable paper and layout presets, exact physical dimensions, and browser-ready print output."
+order: 5
+stack:
+  - "react"
+cover: "../../assets/projects/photo-print-tool-cover.webp"
+links:
+  - label: "View on GitHub"
+    url: "https://github.com/LuisHCK/photo-print-tool"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Demo"
+    url: "https://photoprint.memoriasdevidafoto.com/"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Project details"
+    url: "/projects/photo-print-tool"
+---
 # Photo Print Tool
 
 **Precise photo layouts for real print workflows.**  

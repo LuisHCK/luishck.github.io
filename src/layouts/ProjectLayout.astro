@@ -2,50 +2,34 @@
 import { Image } from 'astro:assets'
 import BaseLayout from './BaseLayout.astro'
 import { Profile } from '../data'
-import { getProjectCover } from '../data/covers'
 import GithubButton from '../components/github-button/GithubButton.astro'
 
-const { project, content, className = 'ProjectPage' } = Astro.props
-
-const links: Array<{ label: string; url: string }> = project.links ?? []
+const { project, className = 'ProjectPage' } = Astro.props
+const { name, description, cover } = project.data
+const links: Array<{ label: string; url: string }> = project.data.links ?? []
 const githubLink = links.find((link) => link.label === 'View on GitHub')?.url
-const localCover = getProjectCover(project.slug)
-const remoteCover = typeof project.cover === 'string' ? project.cover : null
-const coverImage = localCover ?? remoteCover
 ---
 <BaseLayout
-    title={`${Profile.name} | ${project.name}`}
-    description={project.description}
-    image={remoteCover ?? undefined}
+    title={`${Profile.name} | ${name}`}
+    description={description}
     className={className}
 >
     <div class="container is-max-desktop p-5">
-        {coverImage && (
-            <figure class="project__cover">
-                {localCover ? (
-                    <Image
-                        src={localCover}
-                        alt={`${project.name} cover image`}
-                        widths={[640, 1280]}
-                        sizes="(max-width: 768px) 100vw, 768px"
-                        format="webp"
-                        quality={85}
-                        loading="lazy"
-                        decoding="async"
-                    />
-                ) : (
-                    <img
-                        src={remoteCover}
-                        alt={`${project.name} cover image`}
-                        loading="lazy"
-                        decoding="async"
-                    />
-                )}
-            </figure>
-        )}
+        <figure class="project__cover">
+            <Image
+                src={cover}
+                alt={`${name} cover image`}
+                widths={[640, 1280]}
+                sizes="(max-width: 768px) 100vw, 768px"
+                format="webp"
+                quality={85}
+                loading="lazy"
+                decoding="async"
+            />
+        </figure>
 
         <article class="box project">
-            <Fragment set:html={content} />
+            <slot />
 
             {githubLink && (
                 <div class="m-4 has-text-centered">

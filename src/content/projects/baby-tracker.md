@@ -1,3 +1,22 @@
+---
+name: "Baby Tracker"
+description: "BabyTracker is a web app built with React that helps parents keep track of their baby's daily activities and milestones."
+order: 1
+stack:
+  - "react"
+cover: "../../assets/projects/baby-tracker-banner.jpg"
+links:
+  - label: "View on GitHub"
+    url: "https://github.com/LuisHCK/baby-tracker"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Demo"
+    url: "https://babytracker.luisjcenteno.dev/app"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Project details"
+    url: "/projects/baby-tracker"
+---
 # Baby Tracker 👶
 
 Welcome to **Baby Tracker**, the ultimate app designed to help you monitor and manage your little one's daily activities with ease. Whether you're tracking feedings, diapers, sleep, or baby growth, Baby Tracker has you covered!

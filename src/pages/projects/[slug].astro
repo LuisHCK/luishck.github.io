@@ -1,15 +1,20 @@
 ---
+import { render } from 'astro:content'
 import ProjectLayout from '../../layouts/ProjectLayout.astro'
-import { Projects } from '../../data'
-import { getProjectData } from '../../utils'
+import { getProjects } from '../../data/projects'
 
-export function getStaticPaths() {
-    return Projects
-        .filter(({ slug }) => typeof slug === 'string' && slug.trim().length)
-        .map(({ slug }) => ({ params: { slug } }))
+export async function getStaticPaths() {
+    const projects = await getProjects()
+
+    return projects.map((project) => ({
+        params: { slug: project.id },
+        props: { project },
+    }))
 }
 
-const { slug } = Astro.params
-const { project, content } = await getProjectData(slug)
+const { project } = Astro.props
+const { Content } = await render(project)
 ---
-<ProjectLayout className="ProjectPage" project={project} content={content} />
+<ProjectLayout className="ProjectPage" project={project}>
+    <Content />
+</ProjectLayout>

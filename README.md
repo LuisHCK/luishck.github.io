@@ -5,8 +5,9 @@
 ## Stack
 
 - Astro static output with no client-side framework runtime
+- Astro content collections for projects
 - Bulma + SCSS
-- Project READMEs vendored locally for reproducible builds
+- Self-hosted Poppins fonts
 - Optimized local images via `astro:assets`
 
 ## Development
@@ -17,19 +18,32 @@ bun run dev         # http://localhost:4321
 bun run build       # static output in dist/
 bun run preview     # preview the production build
 bun run check       # Astro type/diagnostic check
-bun run check:seo   # title/meta/canonical/sitemap/link audit
-bun run refresh:readmes
+bun run lint        # ESLint
+bun run check:seo   # title/meta/canonical/JSON-LD/sitemap/link audit
+bun run test:e2e    # Playwright smoke tests (builds and serves via Docker Compose)
 ```
 
 ## Project content
 
-Project READMEs are downloaded into `src/data/readmes/` and rendered from the local copies.
-This keeps Docker and CI builds independent of GitHub availability. To refresh them from the
-URLs in `src/data/projects.json`:
+Each project lives in `src/content/projects/<slug>.md`. The frontmatter contains the card
+metadata and the Markdown body is the project page:
 
-```sh
-bun run refresh:readmes
+```yaml
+---
+name: 'Project name'
+description: 'Card description'
+order: 1
+stack: ['react']
+cover: '../../assets/projects/project-cover.jpg'
+links:
+  - label: 'View on GitHub'
+    url: 'https://github.com/...'
+    target: '_blank'
+    rel: 'noreferrer'
+---
 ```
+
+Covers live in `src/assets/projects/` and are validated/optimized by the content schema.
 
 ## Docker Compose
 
@@ -39,8 +53,8 @@ docker compose logs -f
 docker compose down
 ```
 
-The compose stack builds the Astro site and serves it with an unprivileged Nginx container on
-port `8080`. Override the published host port or canonical site URL with environment variables:
+The stack builds the Astro site and serves it with an unprivileged Nginx container on port
+`8080`. Override the published host port or canonical site URL with environment variables:
 
 ```sh
 PORT=3000 SITE_URL=https://staging.example.com docker compose up --build -d
@@ -51,12 +65,23 @@ PORT=3000 SITE_URL=https://staging.example.com docker compose up --build -d
 - Static output is generated with `astro build` and served by Nginx in Docker.
 - Nginx runs as the unprivileged `nginx` user and listens on port `8080` inside the container.
 - Base images are pinned by digest.
+- The container filesystem is read-only, all Linux capabilities are dropped, and
+  `no-new-privileges` is enabled.
+- A Content Security Policy blocks inline scripts and restricts styles, fonts, images, and
+  analytics connections.
+- HSTS is emitted by the container; terminate TLS at the reverse proxy and ensure the proxy
+  forwards HTTPS traffic.
 - Custom Nginx rules live in `nginx/default.conf`.
-- A Content Security Policy restricts scripts, styles, fonts, images, and analytics connections.
 - Common scanner probe paths like `.env`, `xmlrpc.php`, `wp-*`, and `*.php` return `404`.
 - Dotfiles are blocked except `/.well-known/*`.
 - Hash-based assets in `/_astro/` are cached immutably; HTML is served with `no-cache`.
 - Unknown routes return the custom `404.html` page.
+
+## CI and dependency updates
+
+- `.github/workflows/ci.yml` runs checks, lint, build, the SEO audit, Docker build validation,
+  and Playwright smoke tests on pushes and pull requests.
+- `.github/dependabot.yml` keeps npm, Docker base images, and GitHub Actions current.
 
 ## Sitemap automation
 

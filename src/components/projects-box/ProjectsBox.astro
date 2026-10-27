@@ -1,24 +1,23 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import ProjectCard from '../project-card/ProjectCard.astro'
-import { getProjectCover } from '../../data/covers'
 
-const { title = '', description = '', projects = [] } = Astro.props
-const sortedProjects = [...projects].sort((a, b) => a.order - b.order)
+const { title = '', description = '' } = Astro.props
+const projects: CollectionEntry<'projects'>[] = Astro.props.projects ?? []
 ---
 <section class="box">
     <h3 class="is-size-3 has-text-weight-bold">{title}</h3>
     <p>{description}</p>
 
     <div class="columns is-mobile is-multiline mt-3">
-        {sortedProjects.map((project) => (
+        {projects.map((project) => (
             <div class="column is-half-desktop is-full-mobile">
                 <ProjectCard
-                    slug={project.slug}
-                    name={project.name}
-                    description={project.description}
-                    image={getProjectCover(project.slug) ?? project.cover}
-                    stack={project.stack}
-                    links={project.links}
+                    name={project.data.name}
+                    description={project.data.description}
+                    image={project.data.cover}
+                    stack={project.data.stack}
+                    links={project.data.links}
                 />
             </div>
         ))}

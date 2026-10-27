@@ -11,4 +11,10 @@
         }
     }
     background-color: $scheme-main !important;
+
+    .navbar-item[aria-current='page'] {
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 0.35rem;
+    }
 }

@@ -1,5 +1,9 @@
 ---
 import { Profile } from '../../data'
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/'
+const isHome = path === '/'
+const isProjects = path.startsWith('/projects')
 ---
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -16,6 +20,7 @@ import { Profile } from '../../data'
             class="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
+            aria-controls="navbarMenu"
             data-target="navbarMenu"
         >
             <span aria-hidden="true"></span>
@@ -29,6 +34,7 @@ import { Profile } from '../../data'
             <a
                 href="/"
                 class="navbar-item"
+                aria-current={isHome ? 'page' : undefined}
                 data-umami-event="home_link_click"
                 data-umami-event-type="click"
             >
@@ -38,6 +44,7 @@ import { Profile } from '../../data'
             <a
                 href="/projects"
                 class="navbar-item"
+                aria-current={isProjects ? 'page' : undefined}
                 data-umami-event="projects_link_click"
                 data-umami-event-type="click"
             >

@@ -15,27 +15,17 @@ const links: Array<{ label: string; url: string; target?: string; rel?: string }
 <div class="ProjectCard card">
     <div class="card-image">
         <figure class="image is-16by9">
-            {typeof image === 'object' && image !== null ? (
-                <Image
-                    src={image}
-                    alt={name}
-                    class="adjusted-image"
-                    widths={[400, 800]}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    format="webp"
-                    quality={82}
-                    loading="lazy"
-                    decoding="async"
-                />
-            ) : (
-                <img
-                    class="adjusted-image"
-                    src={image}
-                    alt={name}
-                    loading="lazy"
-                    decoding="async"
-                />
-            )}
+            <Image
+                src={image}
+                alt={name}
+                class="adjusted-image"
+                widths={[400, 800]}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                format="webp"
+                quality={82}
+                loading="lazy"
+                decoding="async"
+            />
         </figure>
     </div>
 
@@ -50,7 +40,7 @@ const links: Array<{ label: string; url: string; target?: string; rel?: string }
             </div>
         </div>
 
-        <div class="content" set:html={description || ''} />
+        <div class="content">{description}</div>
     </div>
 
     <footer class="card-footer">

@@ -1,3 +1,18 @@
+---
+name: "ADM2"
+description: "A Web App to manage your small store. Build with web technologies"
+order: 2
+stack:
+  - "vue"
+cover: "../../assets/projects/adm2-cover.jpg"
+links:
+  - label: "View on GitHub"
+    url: "https://github.com/LuisHCK/adm2"
+    target: "_blank"
+    rel: "noreferrer"
+  - label: "Project details"
+    url: "/projects/adm2"
+---
 # ADM2
 ADM2 is a simple but useful tool to manage your small store.
 

@@ -94,6 +94,19 @@ const auditHtml = (html, label) => {
         }
     }
 
+    const jsonLd = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i)?.[1]
+    if (!jsonLd) {
+        issues.push('missing JSON-LD')
+    } else {
+        try {
+            JSON.parse(jsonLd)
+        } catch {
+            issues.push('invalid JSON-LD')
+        }
+    }
+
+    if (!meta['og:site_name']) issues.push('missing og:site_name')
+
     return { issues, meta, canonical, links: getLinks(html), title, label }
 }
 
@@ -147,6 +160,12 @@ const checkLocal = async () => {
         }
     } catch {
         issues.push('missing robots.txt')
+    }
+
+    try {
+        JSON.parse(await readFile(path.join(distDir, 'site.webmanifest'), 'utf8'))
+    } catch {
+        issues.push('missing or invalid site.webmanifest')
     }
 
     return { results, issues, sitemapCount }

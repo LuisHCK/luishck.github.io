@@ -4,10 +4,12 @@ import ProfileBox from '../components/profile-box/ProfileBox.astro'
 import AboutMeBox from '../components/about-me-box/AboutMeBox.astro'
 import ProjectsBox from '../components/projects-box/ProjectsBox.astro'
 import WorkExperience from '../components/work-experience/WorkExperience.astro'
-import { Profile, Projects, WorkExp } from '../data'
+import { Profile, WorkExp } from '../data'
+import { getProjects } from '../data/projects'
 import avatar from '../assets/avatar.jpeg'
 
 const title = `${Profile.name} | ${Profile.title}`
+const projects = await getProjects()
 ---
 <BaseLayout className="HomePage" title={title} description={Profile.short_desc}>
     <div class="container">
@@ -19,7 +21,7 @@ const title = `${Profile.name} | ${Profile.title}`
                     role={Profile.title}
                     email={Profile.email}
                     country={Profile.location}
-                    skills={Profile.skils}
+                    skills={Profile.skills}
                 />
             </div>
 
@@ -30,7 +32,7 @@ const title = `${Profile.name} | ${Profile.title}`
                     <ProjectsBox
                         title="Projects"
                         description="A selection of the things I've built and shipped."
-                        projects={Projects}
+                        projects={projects}
                     />
                 </div>
             </div>
