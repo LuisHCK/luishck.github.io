@@ -1,0 +1,55 @@
+---
+import brandAndroid from '@tabler/icons/outline/brand-android.svg?raw'
+import brandAngular from '@tabler/icons/outline/brand-angular.svg?raw'
+import brandApple from '@tabler/icons/outline/brand-apple.svg?raw'
+import brandGithub from '@tabler/icons/outline/brand-github.svg?raw'
+import brandJavascript from '@tabler/icons/outline/brand-javascript.svg?raw'
+import brandNodejs from '@tabler/icons/outline/brand-nodejs.svg?raw'
+import brandPython from '@tabler/icons/outline/brand-python.svg?raw'
+import brandReact from '@tabler/icons/outline/brand-react.svg?raw'
+import brandVue from '@tabler/icons/outline/brand-vue.svg?raw'
+import database from '@tabler/icons/outline/database.svg?raw'
+import download from '@tabler/icons/outline/download.svg?raw'
+import mapPin from '@tabler/icons/outline/map-pin.svg?raw'
+import server from '@tabler/icons/outline/server.svg?raw'
+import at from '@tabler/icons/outline/at.svg?raw'
+
+const { name, width = 24, height = 24, color, class: className = '' } = Astro.props
+
+const icons: Record<string, string> = {
+    android: brandAndroid,
+    angular: brandAngular,
+    apple: brandApple,
+    at,
+    database,
+    download,
+    github: brandGithub,
+    javascript: brandJavascript,
+    'map-pin': mapPin,
+    nodejs: brandNodejs,
+    postgres: database,
+    python: brandPython,
+    react: brandReact,
+    server,
+    vue: brandVue,
+    express: server,
+}
+
+let svg = icons[name]
+
+if (svg) {
+    svg = svg
+        .replace(/class="[^"]*"/, '')
+        .replace(
+            '<svg',
+            `<svg${className ? ` class="${className}"` : ''} aria-hidden="true" focusable="false"`
+        )
+        .replace(/width="[^"]*"/, `width="${width}"`)
+        .replace(/height="[^"]*"/, `height="${height}"`)
+
+    if (color) {
+        svg = svg.replaceAll('currentColor', color)
+    }
+}
+---
+{svg && <Fragment set:html={svg} />}

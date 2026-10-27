@@ -3,12 +3,7 @@ import getProjectContent from './getProjectContent'
 
 const getProjectData = async (slug) => {
     const project = getProjectBySlug(slug)
-
-    if (!project.content) {
-        throw new Error(`No markdown content configured for project "${slug}"`)
-    }
-
-    const content = await getProjectContent(project.content)
+    const content = await getProjectContent(slug, project.content)
 
     return {
         project,

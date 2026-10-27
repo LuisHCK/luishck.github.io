@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import ProjectCard from '../../components/project-card/index.jsx'
+import ProjectCard from '../../components/project-card/ProjectCard.astro'
 import { Profile, Projects } from '../../data'
+import { getProjectCover } from '../../data/covers'
 ---
 <BaseLayout
     className="ProjectsPage"
@@ -22,7 +23,7 @@ import { Profile, Projects } from '../../data'
                             name={project.name}
                             description={project.description}
                             stack={project.stack}
-                            image={project.cover}
+                            image={getProjectCover(project.slug) ?? project.cover}
                             links={project.links}
                         />
                     </div>

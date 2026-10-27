@@ -2,10 +2,12 @@
 
 > Project: `luisjcenteno.dev` (personal portfolio)
 > Current stack: Next.js 16 Pages Router, static export, Bulma/SCSS, React 19
-> Target: Astro 7 (static output) + React integration, reusing existing React components
+> Target: Astro 7 static output (React components were reused initially, then removed)
 >
-> **Status:** implemented on branch `migrate/astro` with Astro 7.4.2,
-> `@astrojs/react` 7.1.1, and `@astrojs/sitemap` 3.7.4.
+> **Status:** implemented on branch `migrate/astro` with Astro 7.4.2 and
+> `@astrojs/sitemap` 3.7.4. Follow-up cleanups also completed: React was removed
+> entirely, READMEs are vendored, local images use `astro:assets`, Nginx runs
+> unprivileged, and a CSP is in place.
 
 ---
 
@@ -1135,8 +1137,8 @@ Keeping these separable makes it easy to review and to bisect any visual regress
 
 ## 9. Optional follow-up: drop React entirely
 
-After the site is stable, the presentational components can be rewritten as `.astro`
-components. At that point:
+**Completed.** The presentational components were rewritten as `.astro`
+components, so:
 
 - `@astrojs/react`, `react`, and `react-dom` can be removed.
 - `@tabler/icons-react` can be replaced with inline SVGs or `@tabler/icons`.

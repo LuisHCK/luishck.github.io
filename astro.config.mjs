@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config'
-import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 
 export default defineConfig({
@@ -8,5 +7,5 @@ export default defineConfig({
     build: {
         format: 'directory',
     },
-    integrations: [react(), sitemap()],
+    integrations: [sitemap()],
 })

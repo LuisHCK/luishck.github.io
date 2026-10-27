@@ -4,17 +4,31 @@
 
 ## Stack
 
-- Astro (static output) with React components rendered at build time
+- Astro static output with no client-side framework runtime
 - Bulma + SCSS
-- Markdown project READMEs fetched during the build
+- Project READMEs vendored locally for reproducible builds
+- Optimized local images via `astro:assets`
 
 ## Development
 
 ```sh
 bun install
-bun run dev       # http://localhost:4321
-bun run build     # static output in dist/
-bun run preview   # preview the production build
+bun run dev         # http://localhost:4321
+bun run build       # static output in dist/
+bun run preview     # preview the production build
+bun run check       # Astro type/diagnostic check
+bun run check:seo   # title/meta/canonical/sitemap/link audit
+bun run refresh:readmes
+```
+
+## Project content
+
+Project READMEs are downloaded into `src/data/readmes/` and rendered from the local copies.
+This keeps Docker and CI builds independent of GitHub availability. To refresh them from the
+URLs in `src/data/projects.json`:
+
+```sh
+bun run refresh:readmes
 ```
 
 ## Docker Compose
@@ -25,8 +39,8 @@ docker compose logs -f
 docker compose down
 ```
 
-The compose stack builds the Astro site and serves it with Nginx. Override the published port
-or canonical site URL with environment variables:
+The compose stack builds the Astro site and serves it with an unprivileged Nginx container on
+port `8080`. Override the published host port or canonical site URL with environment variables:
 
 ```sh
 PORT=3000 SITE_URL=https://staging.example.com docker compose up --build -d
@@ -35,7 +49,10 @@ PORT=3000 SITE_URL=https://staging.example.com docker compose up --build -d
 ## Deployment hardening
 
 - Static output is generated with `astro build` and served by Nginx in Docker.
+- Nginx runs as the unprivileged `nginx` user and listens on port `8080` inside the container.
+- Base images are pinned by digest.
 - Custom Nginx rules live in `nginx/default.conf`.
+- A Content Security Policy restricts scripts, styles, fonts, images, and analytics connections.
 - Common scanner probe paths like `.env`, `xmlrpc.php`, `wp-*`, and `*.php` return `404`.
 - Dotfiles are blocked except `/.well-known/*`.
 - Hash-based assets in `/_astro/` are cached immutably; HTML is served with `no-cache`.

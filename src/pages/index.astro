@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import ProfileBox from '../components/profile-box/index.jsx'
-import AboutMeBox from '../components/about-me-box/index.jsx'
-import ProjectsBox from '../components/projects-box/index.jsx'
-import WorkExperience from '../components/work-experience/index.jsx'
+import ProfileBox from '../components/profile-box/ProfileBox.astro'
+import AboutMeBox from '../components/about-me-box/AboutMeBox.astro'
+import ProjectsBox from '../components/projects-box/ProjectsBox.astro'
+import WorkExperience from '../components/work-experience/WorkExperience.astro'
 import { Profile, Projects, WorkExp } from '../data'
+import avatar from '../assets/avatar.jpeg'
 
 const title = `${Profile.name} | ${Profile.title}`
 ---
@@ -14,7 +15,7 @@ const title = `${Profile.name} | ${Profile.title}`
             <div class="column is-one-third-desktop is-full-mobile HomePage-profileColumn">
                 <ProfileBox
                     name={Profile.name}
-                    avatar={Profile.photo}
+                    avatar={avatar}
                     role={Profile.title}
                     email={Profile.email}
                     country={Profile.location}
@@ -26,7 +27,11 @@ const title = `${Profile.name} | ${Profile.title}`
                 <div class="HomePage-scrollArea">
                     <AboutMeBox title={Profile.title} description={Profile.about} />
                     <WorkExperience jobs={WorkExp} />
-                    <ProjectsBox projects={Projects} />
+                    <ProjectsBox
+                        title="Projects"
+                        description="A selection of the things I've built and shipped."
+                        projects={Projects}
+                    />
                 </div>
             </div>
         </div>

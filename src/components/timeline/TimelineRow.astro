@@ -1,0 +1,47 @@
+---
+const {
+    company,
+    role,
+    title,
+    subtitle,
+    date,
+    location,
+    website,
+    client,
+    highlights = [],
+} = Astro.props
+
+const roleText = role || title
+const companyText = company || subtitle
+const points = Array.isArray(highlights) ? highlights : []
+---
+<div class="Timeline-row">
+    <div class="Timeline-rowContainer">
+        <div class="Timeline-rowContent">
+            <h4 class="Timeline-rowHeading has-text-weight-semibold is-size-5">
+                {website ? (
+                    <a href={website} target="_blank" rel="noopener noreferrer">
+                        {companyText}
+                    </a>
+                ) : (
+                    companyText
+                )}
+                {roleText ? <span class="Timeline-separator"> | </span> : null}
+                {roleText ? <span class="Timeline-role">{roleText}</span> : null}
+            </h4>
+            <p class="Timeline-rowMeta is-size-7">
+                <span>{date}</span>
+                {location ? <span class="Timeline-separator"> | </span> : null}
+                {location ? <span>{location}</span> : null}
+            </p>
+            {client ? <p class="Timeline-rowClient is-size-7">Client: {client}</p> : null}
+            {points.length > 0 ? (
+                <ul class="Timeline-rowHighlights">
+                    {points.map((point) => (
+                        <li>{point}</li>
+                    ))}
+                </ul>
+            ) : null}
+        </div>
+    </div>
+</div>

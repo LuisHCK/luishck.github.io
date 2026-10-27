@@ -7,7 +7,6 @@ import workExperience from './work-experience.json'
  * @type {Object}
  * @property {String} name - Fullname
  * @property {String} title - Developer title
- * @property {String} photo - Photo url
  * @property {String} about - About text
  * @property {String} short_desc - Short description
  * @property {Array<String>} skils - Skills list
@@ -35,7 +34,7 @@ export const Profile = profile
  * @property {String} description - Project description text
  * @property {Array<String>} stack - Stack of techologies
  * @property {String} content - Content Link
- * @property {String} cover - Cover URL
+ * @property {String|null} cover - Remote cover URL (local covers live in data/covers.js)
  * @property {Array<ProjectLink>} links -
  */
 

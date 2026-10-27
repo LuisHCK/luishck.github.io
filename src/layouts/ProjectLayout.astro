@@ -1,24 +1,46 @@
 ---
+import { Image } from 'astro:assets'
 import BaseLayout from './BaseLayout.astro'
 import { Profile } from '../data'
-import GithubButton from '../components/github-button'
+import { getProjectCover } from '../data/covers'
+import GithubButton from '../components/github-button/GithubButton.astro'
 
 const { project, content, className = 'ProjectPage' } = Astro.props
 
 const links: Array<{ label: string; url: string }> = project.links ?? []
 const githubLink = links.find((link) => link.label === 'View on GitHub')?.url
-const coverImage = typeof project.cover === 'string' ? project.cover : null
+const localCover = getProjectCover(project.slug)
+const remoteCover = typeof project.cover === 'string' ? project.cover : null
+const coverImage = localCover ?? remoteCover
 ---
 <BaseLayout
     title={`${Profile.name} | ${project.name}`}
     description={project.description}
-    image={coverImage ?? undefined}
+    image={remoteCover ?? undefined}
     className={className}
 >
     <div class="container is-max-desktop p-5">
         {coverImage && (
             <figure class="project__cover">
-                <img src={coverImage} alt={`${project.name} cover image`} loading="lazy" />
+                {localCover ? (
+                    <Image
+                        src={localCover}
+                        alt={`${project.name} cover image`}
+                        widths={[640, 1280]}
+                        sizes="(max-width: 768px) 100vw, 768px"
+                        format="webp"
+                        quality={85}
+                        loading="lazy"
+                        decoding="async"
+                    />
+                ) : (
+                    <img
+                        src={remoteCover}
+                        alt={`${project.name} cover image`}
+                        loading="lazy"
+                        decoding="async"
+                    />
+                )}
             </figure>
         )}
 

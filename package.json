@@ -7,29 +7,25 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "check:seo": "node scripts/check-seo.mjs",
+    "refresh:readmes": "node scripts/fetch-readmes.mjs",
     "astro": "astro",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/react": "^7.1.1",
     "@astrojs/sitemap": "^3.7.4",
-    "@tabler/icons-react": "^3.37.1",
+    "@tabler/icons": "^3.50.0",
     "astro": "^7.4.2",
     "bulma": "^0.9.4",
     "marked": "^12.0.0",
-    "prop-types": "^15.8.1",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
     "sass": "1.70.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
     "@eslint/js": "^10.0.1",
-    "@types/prop-types": "^15.7.15",
     "@typescript-eslint/parser": "^8.72.1",
     "eslint": "^9",
     "eslint-plugin-astro": "^3.2.1",
-    "eslint-plugin-react": "^7.37.5",
     "globals": "^17.13.0",
     "typescript": "^6.0.0"
   }
