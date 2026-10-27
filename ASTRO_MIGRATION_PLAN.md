@@ -6,8 +6,9 @@
 >
 > **Status:** implemented on branch `migrate/astro` with Astro 7.4.2 and
 > `@astrojs/sitemap` 3.7.4. Follow-up cleanups also completed: React was removed
-> entirely, READMEs are vendored, local images use `astro:assets`, Nginx runs
-> unprivileged, and a CSP is in place.
+> entirely, projects use content collections, fonts and images are self-hosted,
+> Nginx runs unprivileged and read-only, a CSP is in place, and CI/Playwright
+> coverage was added.
 
 ---
 
