@@ -1,0 +1,58 @@
+---
+import NavBar from '../components/navbar/Navbar.astro'
+import '../styles/globals.scss'
+
+const {
+    title,
+    description,
+    image = '/images/cover.jpg',
+    className = '',
+    type = 'website',
+} = Astro.props
+
+const site = Astro.site ?? new URL('https://luisjcenteno.dev')
+const canonical = new URL(Astro.url.pathname, site)
+const ogImage = new URL(image, site)
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={canonical} />
+
+        <meta name="description" content={description} />
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            is:inline
+            defer
+            src="https://analytics.luisjcenteno.dev/script.js"
+            data-website-id="2c1eb7da-c2ec-47eb-8e4b-d741d9ff8e9f"
+        ></script>
+    </head>
+    <body>
+        <main class:list={['MainLayout', className]}>
+            <NavBar />
+            <slot />
+        </main>
+    </body>
+</html>

@@ -3,5 +3,8 @@
 node_modules
 .next
 out
+dist
+.astro
 .vscode
 README.md
+ASTRO_MIGRATION_PLAN.md

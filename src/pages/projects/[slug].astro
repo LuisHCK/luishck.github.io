@@ -1,0 +1,15 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro'
+import { Projects } from '../../data'
+import { getProjectData } from '../../utils'
+
+export function getStaticPaths() {
+    return Projects
+        .filter(({ slug }) => typeof slug === 'string' && slug.trim().length)
+        .map(({ slug }) => ({ params: { slug } }))
+}
+
+const { slug } = Astro.params
+const { project, content } = await getProjectData(slug)
+---
+<ProjectLayout className="ProjectPage" project={project} content={content} />

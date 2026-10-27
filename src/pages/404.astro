@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Profile } from '../data'
+---
+<BaseLayout
+    title={`Page not found | ${Profile.name}`}
+    description="This page does not exist."
+>
+    <div class="container mt-6">
+        <h1 class="title is-1">404</h1>
+        <p>This page does not exist.</p>
+        <p>
+            <a href="/">Go back home</a>
+        </p>
+    </div>
+</BaseLayout>

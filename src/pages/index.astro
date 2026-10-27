@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ProfileBox from '../components/profile-box/index.jsx'
+import AboutMeBox from '../components/about-me-box/index.jsx'
+import ProjectsBox from '../components/projects-box/index.jsx'
+import WorkExperience from '../components/work-experience/index.jsx'
+import { Profile, Projects, WorkExp } from '../data'
+
+const title = `${Profile.name} | ${Profile.title}`
+---
+<BaseLayout className="HomePage" title={title} description={Profile.short_desc}>
+    <div class="container">
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-one-third-desktop is-full-mobile HomePage-profileColumn">
+                <ProfileBox
+                    name={Profile.name}
+                    avatar={Profile.photo}
+                    role={Profile.title}
+                    email={Profile.email}
+                    country={Profile.location}
+                    skills={Profile.skils}
+                />
+            </div>
+
+            <div class="column HomePage-scrollContainer">
+                <div class="HomePage-scrollArea">
+                    <AboutMeBox title={Profile.title} description={Profile.about} />
+                    <WorkExperience jobs={WorkExp} />
+                    <ProjectsBox projects={Projects} />
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

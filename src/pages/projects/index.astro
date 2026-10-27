@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ProjectCard from '../../components/project-card/index.jsx'
+import { Profile, Projects } from '../../data'
+---
+<BaseLayout
+    className="ProjectsPage"
+    title={`${Profile.name} | Projects`}
+    description="Check out these great projects that I have developed"
+>
+    <div class="container pt-5 pb-5">
+        <div class="box">
+            <h1 class="title">Projects 🚀</h1>
+            <p class="subtitle is-6">
+                Explore these builds and reach out if one sparks your next idea.
+            </p>
+
+            <div class="columns is-mobile is-multiline">
+                {Projects.map((project) => (
+                    <div class="column is-half-desktop is-full-mobile">
+                        <ProjectCard
+                            name={project.name}
+                            description={project.description}
+                            stack={project.stack}
+                            image={project.cover}
+                            links={project.links}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</BaseLayout>

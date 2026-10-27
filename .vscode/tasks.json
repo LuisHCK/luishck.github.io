@@ -4,8 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "serve",
-            "command": "bundle exec jekyll serve"
+            "label": "dev",
+            "type": "shell",
+            "command": "bun run dev",
+            "problemMatcher": []
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "bun run build",
+            "problemMatcher": []
         }
     ]
 }

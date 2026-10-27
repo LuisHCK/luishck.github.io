@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import { Profile } from '../data'
+import GithubButton from '../components/github-button'
+
+const { project, content, className = 'ProjectPage' } = Astro.props
+
+const links: Array<{ label: string; url: string }> = project.links ?? []
+const githubLink = links.find((link) => link.label === 'View on GitHub')?.url
+const coverImage = typeof project.cover === 'string' ? project.cover : null
+---
+<BaseLayout
+    title={`${Profile.name} | ${project.name}`}
+    description={project.description}
+    image={coverImage ?? undefined}
+    className={className}
+>
+    <div class="container is-max-desktop p-5">
+        {coverImage && (
+            <figure class="project__cover">
+                <img src={coverImage} alt={`${project.name} cover image`} loading="lazy" />
+            </figure>
+        )}
+
+        <article class="box project">
+            <Fragment set:html={content} />
+
+            {githubLink && (
+                <div class="m-4 has-text-centered">
+                    <GithubButton url={githubLink} />
+                </div>
+            )}
+        </article>
+    </div>
+</BaseLayout>
