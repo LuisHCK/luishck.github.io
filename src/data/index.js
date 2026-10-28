@@ -10,6 +10,7 @@ import workExperience from './work-experience.json'
  * @property {String} short_desc - Short description
  * @property {Array<String>} skills - Skills list
  * @property {String} email - Contact email
+ * @property {String} linkedin - LinkedIn profile URL
  * @property {String} location - Current location
  * @property {String} cv - Resume URL
  */

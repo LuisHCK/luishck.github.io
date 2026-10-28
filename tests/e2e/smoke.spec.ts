@@ -92,6 +92,13 @@ test('project page renders README content and GitHub link', async ({ page }) => 
     await expect(page.getByRole('link', { name: /View in GitHub/ })).toBeVisible()
 })
 
+test('contact section links to LinkedIn', async ({ page }) => {
+    await page.goto('/')
+    const linkedin = page.getByRole('link', { name: 'LinkedIn profile' })
+    await expect(linkedin).toHaveAttribute('href', 'https://www.linkedin.com/in/luisjcenteno')
+    await expect(linkedin).toHaveAttribute('target', '_blank')
+})
+
 test('active navigation and skip link are accessible', async ({ page }) => {
     await page.goto('/projects')
     await expect(page.getByRole('link', { name: 'Projects' })).toHaveAttribute(

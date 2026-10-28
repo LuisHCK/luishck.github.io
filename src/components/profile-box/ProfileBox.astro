@@ -6,6 +6,7 @@ const {
     name,
     role,
     email,
+    linkedin,
     country,
     avatar,
 } = Astro.props
@@ -34,6 +35,18 @@ const skills: string[] = Astro.props.skills ?? []
             <li class="ProfileBox-listItem">
                 <Icon name="at" width="22px" color="white" />
                 <a href={`mailto:${email}`}>{email}</a>
+            </li>
+
+            <li class="ProfileBox-listItem">
+                <Icon name="linkedin" width="22px" color="white" />
+                <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn profile"
+                >
+                    LinkedIn
+                </a>
             </li>
 
             <li class="ProfileBox-listItem">
