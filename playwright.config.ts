@@ -9,6 +9,7 @@ export default defineConfig({
     forbidOnly: Boolean(process.env.CI),
     retries: process.env.CI ? 2 : 0,
     reporter: process.env.CI ? [['github'], ['list']] : 'list',
+    globalTeardown: './tests/e2e/global-teardown.ts',
     use: {
         baseURL,
         trace: 'on-first-retry',
@@ -22,9 +23,10 @@ export default defineConfig({
     webServer: useExternalServer
         ? undefined
         : {
-              command: 'docker compose up --build',
+              command: 'sh scripts/e2e-server.sh',
               url: baseURL,
-              reuseExistingServer: !process.env.CI,
+              reuseExistingServer: false,
+              gracefulShutdown: { signal: 'SIGTERM', timeout: 10_000 },
               timeout: 180_000,
           },
 })

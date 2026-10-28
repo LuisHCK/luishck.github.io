@@ -85,6 +85,12 @@ test('serves robots.txt and sitemap files', async ({ request }) => {
     expect(await sitemap.text()).toContain('sitemap-0.xml')
 })
 
+test('project card image opens the project details page', async ({ page }) => {
+    await page.goto('/projects')
+    await page.getByRole('link', { name: 'View ADM2 project details' }).click()
+    await expect(page).toHaveURL('/projects/adm2')
+})
+
 test('project page renders README content and GitHub link', async ({ page }) => {
     await page.goto('/projects/adm2')
     await expect(page.getByRole('heading', { level: 1, name: 'ADM2' })).toBeVisible()

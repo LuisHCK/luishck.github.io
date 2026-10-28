@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 import Icon from '../icon/Icon.astro'
 
 const {
+    slug,
     name,
     description,
     image,
@@ -11,22 +12,33 @@ const {
 const stack: string[] = Astro.props.stack ?? []
 const links: Array<{ label: string; url: string; target?: string; rel?: string }> =
     Astro.props.links ?? []
+
+const detailsUrl =
+    links.find((link) => link.label === 'Project details')?.url ?? `/projects/${slug}`
 ---
 <div class="ProjectCard card">
     <div class="card-image">
-        <figure class="image is-16by9">
-            <Image
-                src={image}
-                alt={name}
-                class="adjusted-image"
-                widths={[400, 800]}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                format="webp"
-                quality={82}
-                loading="lazy"
-                decoding="async"
-            />
-        </figure>
+        <a
+            class="ProjectCard-imageLink"
+            href={detailsUrl}
+            aria-label={`View ${name} project details`}
+            data-umami-event="project_image_click"
+            data-umami-event-type="click"
+        >
+            <figure class="image is-16by9">
+                <Image
+                    src={image}
+                    alt={name}
+                    class="adjusted-image"
+                    widths={[400, 800]}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    format="webp"
+                    quality={82}
+                    loading="lazy"
+                    decoding="async"
+                />
+            </figure>
+        </a>
     </div>
 
     <div class="card-content">
