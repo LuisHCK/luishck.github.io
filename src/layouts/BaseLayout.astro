@@ -1,0 +1,90 @@
+---
+import NavBar from '../components/navbar/Navbar.astro'
+import { Profile } from '../data'
+import '@fontsource/poppins/latin-300.css'
+import '@fontsource/poppins/latin-400.css'
+import '@fontsource/poppins/latin-500.css'
+import '@fontsource/poppins/latin-600.css'
+import '@fontsource/poppins/latin-700.css'
+import '../styles/globals.scss'
+
+const {
+    title,
+    description,
+    image = '/images/cover.jpg',
+    className = '',
+    type = 'website',
+} = Astro.props
+
+const site = Astro.site ?? new URL('https://luisjcenteno.dev')
+const canonical = new URL(Astro.url.pathname, site)
+const ogImage = new URL(image, site)
+
+const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'Person',
+            '@id': `${site.origin}/#person`,
+            name: Profile.name,
+            jobTitle: Profile.title,
+            url: site.origin,
+            image: new URL('/images/cover.jpg', site).href,
+            sameAs: ['https://github.com/LuisHCK', Profile.linkedin],
+        },
+        {
+            '@type': 'WebSite',
+            '@id': `${site.origin}/#website`,
+            url: site.origin,
+            name: Profile.name,
+            publisher: { '@id': `${site.origin}/#person` },
+        },
+    ],
+}
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="200x200" href="/images/logo.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+        <link rel="canonical" href={canonical} />
+
+        <meta name="description" content={description} />
+        <meta name="author" content={Profile.name} />
+        <meta name="theme-color" content="#1f2330" />
+        <meta property="og:type" content={type} />
+        <meta property="og:site_name" content={Profile.name} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={`${Profile.name} portfolio cover image`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={`${Profile.name} portfolio cover image`} />
+
+        <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+        <script
+            is:inline
+            defer
+            src="https://analytics.luisjcenteno.dev/script.js"
+            data-website-id="2c1eb7da-c2ec-47eb-8e4b-d741d9ff8e9f"
+        ></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <main id="main-content" class:list={['MainLayout', className]} tabindex="-1">
+            <NavBar />
+            <slot />
+        </main>
+    </body>
+</html>

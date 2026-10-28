@@ -1,0 +1,14 @@
+---
+import TimelineRow from './TimelineRow.astro'
+
+const rows: Array<Record<string, any>> = Astro.props.rows ?? []
+---
+<div class="Timeline">
+    <ul>
+        {rows.map((row) => (
+            <li>
+                <TimelineRow {...row} />
+            </li>
+        ))}
+    </ul>
+</div>

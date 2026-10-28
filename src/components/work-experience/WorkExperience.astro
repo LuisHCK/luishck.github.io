@@ -1,0 +1,9 @@
+---
+import Timeline from '../timeline/Timeline.astro'
+
+const { title = 'Work Experience', jobs = [] } = Astro.props
+---
+<section class="box">
+    <h3 class="is-size-3 has-text-weight-bold mb-4">{title}</h3>
+    <Timeline rows={jobs} />
+</section>

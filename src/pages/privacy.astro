@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Profile } from '../data'
+---
+<BaseLayout
+    className="PrivacyPage"
+    title={`Privacy Policy | ${Profile.name}`}
+    description="Privacy policy for luisjcenteno.dev"
+>
+    <article class="container mt-6">
+        <h1 class="title is-1">Privacy Policy</h1>
+
+        <p>
+            <strong>Effective Date:</strong> October 2026
+        </p>
+        <p>
+            This is the personal portfolio of <strong>{Profile.name}</strong>. It is a
+            static website: there are no accounts, login forms, comments, or
+            user-submitted content.
+        </p>
+
+        <h2 class="title is-4 mb-0">Information Collection</h2>
+        <p>
+            The site does not ask for or store personal information. Like most web
+            servers, the hosting provider may record standard request data such as
+            IP address, user agent, requested URL, and timestamp for security and
+            operational purposes.
+        </p>
+
+        <h2 class="title is-4 mb-0">Analytics</h2>
+        <p>
+            This site uses Umami, a privacy-focused, cookieless analytics service, to
+            understand aggregate page views and referrers. Umami does not use cookies
+            and is not intended to identify individual visitors.
+        </p>
+
+        <h2 class="title is-4 mb-0">Cookies</h2>
+        <p>
+            This site does not set cookies. Third-party sites linked from this
+            portfolio may set their own cookies under their respective policies.
+        </p>
+
+        <h2 class="title is-4 mb-0">External Links</h2>
+        <p>
+            Links to GitHub, project demos, and other external websites are provided
+            for convenience. I am not responsible for the content or privacy practices
+            of those sites.
+        </p>
+
+        <h2 class="title is-4 mb-0">Use of Information</h2>
+        <p>
+            Any operational data is used only to keep the site secure, diagnose
+            problems, and understand aggregate traffic. It is not sold, traded, or
+            used for advertising.
+        </p>
+
+        <h2 class="title is-4 mb-0">Data Protection</h2>
+        <p>
+            Reasonable security measures are used to protect the site and its
+            infrastructure. No method of transmission or storage is completely secure,
+            but no personal data is intentionally collected through this site.
+        </p>
+
+        <h2 class="title is-4 mb-0">Contact</h2>
+        <p>
+            Questions about this policy can be sent to
+            <a href={`mailto:${Profile.email}`}>{Profile.email}</a>.
+        </p>
+
+        <h2 class="title is-4 mb-0">Changes to This Policy</h2>
+        <p>
+            This policy may be updated if the site changes. Changes will be posted on
+            this page with a new effective date.
+        </p>
+
+        <p>
+            <strong>{Profile.name}</strong>
+        </p>
+    </article>
+</BaseLayout>

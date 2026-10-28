@@ -7,10 +7,16 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+/blob-report/
 
 # next.js
 /.next/
 /out/
+
+# astro
+/.astro/
 /dist/
 
 # production

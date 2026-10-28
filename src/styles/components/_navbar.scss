@@ -1,0 +1,20 @@
+.navbar {
+
+    @media screen and (max-width: 1023px) {
+        .navbar-menu.open {
+            display: flex;
+            background-color: inherit;
+        }
+
+        .navbar-start {
+            width: 100%;
+        }
+    }
+    background-color: $scheme-main !important;
+
+    .navbar-item[aria-current='page'] {
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 0.35rem;
+    }
+}

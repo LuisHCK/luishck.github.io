@@ -3,5 +3,14 @@
 node_modules
 .next
 out
+dist
+.astro
 .vscode
 README.md
+ASTRO_MIGRATION_PLAN.md
+compose.yaml
+tests
+playwright.config.ts
+test-results
+playwright-report
+.github

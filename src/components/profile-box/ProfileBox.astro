@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets'
+import Icon from '../icon/Icon.astro'
+
+const {
+    name,
+    role,
+    email,
+    linkedin,
+    country,
+    avatar,
+} = Astro.props
+
+const skills: string[] = Astro.props.skills ?? []
+---
+<section class="box ProfileBox">
+    <div class="ProfileBox-avatarContainer">
+        <Image
+            src={avatar}
+            alt={`${name} | ${role}`}
+            class="ProfileBox-avatar"
+            width={200}
+            height={200}
+            format="webp"
+            quality={85}
+        />
+    </div>
+
+    <h1 class="ProfileBox-name is-size-2 has-text-weight-bold">{name}</h1>
+    <h2 class="ProfileBox-role is-size-5">{role}</h2>
+
+    <div class="ProfileBox-contact">
+        <span class="has-text-weight-bold">Contact</span>
+        <ul>
+            <li class="ProfileBox-listItem">
+                <Icon name="at" width="22px" color="white" />
+                <a href={`mailto:${email}`}>{email}</a>
+            </li>
+
+            <li class="ProfileBox-listItem">
+                <Icon name="linkedin" width="22px" color="white" />
+                <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn profile"
+                >
+                    LinkedIn
+                </a>
+            </li>
+
+            <li class="ProfileBox-listItem">
+                <Icon name="map-pin" width="22px" color="white" />
+                <span>{country}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ProfileBox-skills">
+        <span class="has-text-weight-bold">Skills</span>
+        <ul>
+            {skills.map((skill) => (
+                <li class="ProfileBox-listItem">{skill}</li>
+            ))}
+        </ul>
+    </div>
+</section>

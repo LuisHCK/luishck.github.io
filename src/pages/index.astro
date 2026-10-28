@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ProfileBox from '../components/profile-box/ProfileBox.astro'
+import AboutMeBox from '../components/about-me-box/AboutMeBox.astro'
+import ProjectsBox from '../components/projects-box/ProjectsBox.astro'
+import WorkExperience from '../components/work-experience/WorkExperience.astro'
+import { Profile, WorkExp } from '../data'
+import { getProjects } from '../data/projects'
+import avatar from '../assets/avatar.jpeg'
+
+const title = `${Profile.name} | ${Profile.title}`
+const projects = await getProjects()
+---
+<BaseLayout className="HomePage" title={title} description={Profile.short_desc}>
+    <div class="container">
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-one-third-desktop is-full-mobile HomePage-profileColumn">
+                <ProfileBox
+                    name={Profile.name}
+                    avatar={avatar}
+                    role={Profile.title}
+                    email={Profile.email}
+                    linkedin={Profile.linkedin}
+                    country={Profile.location}
+                    skills={Profile.skills}
+                />
+            </div>
+
+            <div class="column HomePage-scrollContainer">
+                <div class="HomePage-scrollArea">
+                    <AboutMeBox title={Profile.title} description={Profile.about} />
+                    <WorkExperience jobs={WorkExp} />
+                    <ProjectsBox
+                        title="Projects"
+                        description="A selection of the things I've built and shipped."
+                        projects={projects}
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

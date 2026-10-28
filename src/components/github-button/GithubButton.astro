@@ -1,0 +1,17 @@
+---
+import Icon from '../icon/Icon.astro'
+
+const { url } = Astro.props
+---
+<a
+    href={url}
+    target="_blank"
+    rel="noreferrer"
+    referrerpolicy="no-referrer"
+    class="button is-light is-rounded"
+>
+    <span>View in GitHub</span>
+    <span class="icon is-medium">
+        <Icon name="github" />
+    </span>
+</a>
